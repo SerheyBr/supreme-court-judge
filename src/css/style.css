@@ -312,6 +312,13 @@ main {
   color: rgba(132, 132, 132, 0.6901960784);
 }
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+}
 .header__top {
   background: #032169;
   font-family: "Noto Sans Hebrew";
@@ -459,6 +466,53 @@ main {
   font-weight: 500;
 }
 
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: right;
+  color: #032169;
+  margin-bottom: 30px;
+}
+
+.legal-practice-post {
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+}
+.legal-practice-post__title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: right;
+  color: #032169;
+  margin-bottom: 20px;
+}
+.legal-practice-post__text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: right;
+  color: #000;
+  margin-bottom: 20px;
+}
+.legal-practice-post__text p {
+  margin-bottom: 20px;
+}
+.legal-practice-post__btn {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  gap: 2px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #0e7bcd;
+}
+
 .sidebar-featured-topics {
   max-width: 300px;
   width: 100%;
@@ -496,8 +550,60 @@ main {
   object-fit: cover;
 }
 
+.sidebar-legal-practice {
+  width: 300px;
+  overflow: auto;
+}
+.sidebar-legal-practice__title {
+  font-weight: 400;
+  font-size: 24px;
+  text-align: right;
+  color: #032169;
+  margin-bottom: 40px;
+}
+.sidebar-legal-practice__list {
+  position: relative;
+}
+.sidebar-legal-practice__list::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 10px;
+  transform: translateY(0);
+  width: 1px;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+}
+.sidebar-legal-practice__list li {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  text-align: right;
+  color: #000;
+  margin-bottom: 25px;
+  position: relative;
+  padding-right: 35px;
+  cursor: pointer;
+}
+.sidebar-legal-practice__list li::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-40%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  z-index: 1;
+}
+.sidebar-legal-practice__list li.active::after {
+  border: 5px solid #000;
+}
+
 .main-home {
-  margin-top: 45px;
+  margin-top: 201px;
 }
 .main-home__wrapper {
   display: flex;
@@ -545,4 +651,27 @@ main {
   text-align: right;
   color: #032169;
   margin-bottom: 30px;
+}
+.legal-practice {
+  margin-top: 176px;
+}
+.legal-practice__wrapper {
+  display: flex;
+}
+.legal-practice__sidebar {
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.legal-practice__body {
+  padding-left: 30px;
+}
+.legal-practice__title {
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 120%;
+  text-align: right;
+  color: #032169;
+  margin-bottom: 20px;
 }

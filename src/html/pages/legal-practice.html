@@ -23,7 +23,28 @@
   </head>
   <body>
     @@include('../components/header.html')
-    <main class="legal-practice"></main>
+    <main class="legal-practice">
+      <div class="container">
+        <div class="legal-practice__wrapper">
+          <div class="legal-practice__body">
+            <div class="legal-practice__body-top">
+              @@include('../components/breadcrumbs.html')
+            </div>
+            <div class="legal-practice__content">
+              <h2 class="legal-practice__title">עשייה משפטית</h2>
+              <div class="legal-practice__posts">
+                @@include('../components/legal-practice-post.html')
+                <!-- br -->
+                @@include('../components/legal-practice-post.html')
+              </div>
+            </div>
+          </div>
+          <div class="legal-practice__sidebar">
+            @@include('../components/sidebar-legal-practice.html')
+          </div>
+        </div>
+      </div>
+    </main>
     @@include('../components/footer.html')
 
     <!-- <script src="assets/libs/slim-select/slimselect.min.js"></script>

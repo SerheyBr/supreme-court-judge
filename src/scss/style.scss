@@ -13,7 +13,10 @@
 @use "modules/components/header";
 @use "modules/components/forms";
 @use "modules/components/input-select";
-@use "modules/components/sidebar-featured-topics";
+// @use "modules/components/sidebar-featured-topics";
+@use "modules/components/breadcrumbs";
+@use "modules/components/posts";
+@use "modules/components/sidebars";
 
 // страницы
 @use "modules/components/pages";

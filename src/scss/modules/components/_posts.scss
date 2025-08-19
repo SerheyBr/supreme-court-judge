@@ -1,0 +1,40 @@
+@use "../base/variables" as *;
+// legal-practice-post start
+.legal-practice-post {
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+  &__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: right;
+    color: $dark-blue;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    text-align: right;
+    color: #000;
+    margin-bottom: 20px;
+    p {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    gap: 2px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: $light-blue;
+  }
+}
+
+// legal-practice-post end

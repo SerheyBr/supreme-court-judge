@@ -1,8 +1,8 @@
 @use "../base/variables" as *;
 
-// home start
+// home page start
 .main-home {
-  margin-top: 45px;
+  margin-top: calc(156px + 45px);
   &__wrapper {
     display: flex;
     align-items: flex-start;
@@ -57,7 +57,42 @@
   &__img {
   }
 }
-.container {
-}
 
-// home end
+// home page end
+// legal-practice page start
+.legal-practice {
+  margin-top: calc(156px + 20px);
+  &__wrapper {
+    display: flex;
+  }
+
+  &__sidebar {
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  &__body {
+    padding-left: 30px;
+  }
+
+  &__body-top {
+  }
+
+  &__content {
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 120%;
+    text-align: right;
+    color: $dark-blue;
+    margin-bottom: 20px;
+  }
+
+  &__posts {
+  }
+}
+// legal-practice page end
