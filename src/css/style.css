@@ -1,0 +1,548 @@
+@charset "UTF-8";
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+}
+
+/* Common */
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+input[type=file] {
+  max-width: 100%;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+input[type=search] {
+  -moz-appearance: none;
+}
+
+input[type=search]::-moz-search-cancel-button {
+  display: none;
+}
+
+input[type=search]::-webkit-search-cancel-button {
+  display: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Noto Sans Hebrew", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+main {
+  flex: 1;
+}
+
+.padding-section {
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1290px;
+  margin: 0 auto;
+}
+
+.none {
+  display: none;
+}
+
+.button {
+  padding: 10px 10px;
+  border-radius: 15px;
+  background-color: grey;
+  transition: all 0.3s;
+  user-select: none;
+  display: inline-block;
+  width: auto;
+  font-size: 1.125rem;
+}
+.button:hover {
+  opacity: 0.7;
+}
+.button--primary {
+  color: #fff;
+}
+.button--secondary {
+  color: #fff;
+}
+.button--outline {
+  background-color: inherit;
+}
+.button--ghost {
+  background-color: inherit;
+}
+.swiper {
+  width: 100%; /* Занимает всю ширину родителя */
+  height: 200px; /* Фиксированная высота (можно auto, если контент определяет высоту) */
+  margin: 0 auto; /* Центрирование, если нужно */
+  position: relative; /* Нужно для позиционирования стрелок и пагинации */
+}
+
+/* Обертка для слайдов (не трогаем ширину/высоту, Swiper сам управляет) */
+.swiper-wrapper {
+  display: flex; /* Слайды в ряд */
+  width: 100%;
+  height: 100%;
+}
+
+/* Стили для каждого слайда */
+.swiper-slide {
+  width: 300px; /* Фиксированная ширина слайда */
+  height: 100%; /* Занимает всю высоту контейнера .swiper */
+  flex-shrink: 0; /* Не сжимается при недостатке места */
+  /* Дополнительные стили для контента внутри слайда */
+  background-color: aqua;
+}
+
+/* Контейнер для стрелок (генерируется Swiper) */
+/* Стрелка "назад" */
+/* Стрелка "вперед" */
+/* Иконки внутри стрелок (опционально) */
+/* Контейнер пагинации (точки) */
+/* Отдельная точка */
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: #ddd;
+  border-radius: 50%;
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Активная точка */
+.swiper-pagination-bullet-active {
+  background: #333;
+}
+
+.my-slider__wrapper {
+  position: relative;
+}
+.my-slider__pagination {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 8px; /* Расстояние между точками */
+}
+.my-slider__button-next, .my-slider__button-prev {
+  width: 40px; /* Ширина стрелки */
+  height: 40px; /* Высота стрелки */
+  background-color: #00ff00;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: absolute; /* Выносим из потока */
+  top: 50%; /* Выравниваем по вертикали */
+  transform: translateY(-100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10; /* Чтобы стрелки были над слайдами */
+}
+.my-slider__button-next {
+  right: -80px;
+}
+.my-slider__button-prev {
+  left: -80px;
+}
+
+.my-slider-slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: rgba(0, 0, 0, 0.566);
+  text-align: center;
+}
+.my-slider-slide__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.my-slider-slide__subtitle {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.my-slider-slide__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.footer {
+  margin-top: 100px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #848484;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  background: #f8f8f8;
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+.footer__right {
+  display: flex;
+  gap: 50px;
+}
+.footer__right li a {
+  transition: all 0.3s;
+}
+.footer__right li a:hover {
+  color: rgba(132, 132, 132, 0.6901960784);
+}
+
+.header__top {
+  background: #032169;
+  font-family: "Noto Sans Hebrew";
+  font-weight: 400;
+  font-size: 22px;
+  text-align: right;
+  color: #fff;
+}
+.header__top h1 {
+  padding: 15px 0;
+}
+.header__body {
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  background: #f8f8f8;
+}
+.header__body nav ul {
+  display: flex;
+}
+.header__body nav ul li {
+  font-family: "Noto Sans Hebrew";
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  color: #032169;
+  white-space: nowrap;
+  padding: 37px 14px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.header__body nav ul li:hover {
+  background: #e6e6e6;
+}
+.header__body-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__search {
+  width: 300px;
+  height: 40px;
+  position: relative;
+}
+.header__search input {
+  border: 1px solid #032169;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  padding-left: 40px;
+  padding-right: 15px;
+}
+.header__search-btn {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.my-form {
+  border: 1px solid #000;
+  max-width: 765px;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.my-form .wpcf7-form-control {
+  border-radius: 15px;
+  border: 1px solid #000;
+  background: linear-gradient(360deg, #f3f5f9 0%, #f8fafe 100%);
+}
+
+.my-form .wpcf7-text {
+  padding: 20px 0 20px 35px;
+  border-radius: 60px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: rgba(105, 104, 111, 0.5);
+  width: 100%;
+}
+
+.my-form .wpcf7-textarea {
+  resize: none;
+}
+
+.my-form .wpcf7-radio {
+  background-color: rgb(0, 47, 255);
+}
+
+.my-form .wpcf7-submit {
+  padding: 20px;
+  width: 100%;
+  box-shadow: inset 0 0 12px 0 rgba(255, 255, 255, 0.45);
+  background: radial-gradient(106.03% 136.67% at 50% 0%, #ffc400 0%, #f90 100%);
+}
+
+.ss-main {
+  width: 100%;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+  min-height: 46px;
+  transition: all 0.2s ease;
+}
+.ss-main:focus-within {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+  background: #fff;
+}
+.ss-main .ss-single-selected {
+  padding: 0.75rem 1rem;
+  color: #1e293b;
+  font-size: 0.9375rem;
+}
+.ss-main .ss-arrow path {
+  stroke: #64748b;
+}
+
+.ss-content {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  margin-top: 0.5rem;
+  background: #fff;
+}
+.ss-content .ss-list .ss-option {
+  padding: 0.75rem 1rem;
+  font-size: 0.9375rem;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.ss-content .ss-list .ss-option:hover {
+  background: #f1f5f9;
+  color: #6366f1;
+}
+.ss-content .ss-list .ss-option.ss-selected {
+  background: #eef2ff;
+  color: #6366f1;
+  font-weight: 500;
+}
+
+.sidebar-featured-topics {
+  max-width: 300px;
+  width: 100%;
+}
+.sidebar-featured-topics__title {
+  font-family: "Noto Sans Hebrew";
+  font-weight: 400;
+  font-size: 24px;
+  text-align: right;
+  color: #032169;
+  margin-bottom: 20px;
+}
+.sidebar-featured-topics ul li {
+  margin-bottom: 15px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  text-align: right;
+  color: #000;
+}
+.sidebar-featured-topics ul li a {
+  display: block;
+  background: #e6e6e6;
+  border-radius: 10px;
+  padding: 15px 30px;
+  position: relative;
+}
+.sidebar-featured-topics__book a {
+  height: 166px;
+}
+.sidebar-featured-topics__book img {
+  position: absolute;
+  bottom: -46px;
+  left: 12px;
+  object-fit: cover;
+}
+
+.main-home {
+  margin-top: 45px;
+}
+.main-home__wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 33px;
+}
+.main-home__body {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: right;
+  color: #000;
+  font-stretch: 88%;
+}
+.main-home__body ul {
+  list-style-position: outside;
+  margin-bottom: 30px;
+  padding-right: 6px;
+}
+.main-home__body ul li {
+  padding-right: 12px;
+  position: relative;
+}
+.main-home__body ul li::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 4px;
+  height: 4px;
+  transform: translateY(-50%);
+  background-color: #000;
+}
+.main-home__body p {
+  margin-bottom: 30px;
+}
+.main-home__body p + ul {
+  margin-top: -30px;
+}
+.main-home__title {
+  margin-top: -10px;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 120%;
+  text-align: right;
+  color: #032169;
+  margin-bottom: 30px;
+}

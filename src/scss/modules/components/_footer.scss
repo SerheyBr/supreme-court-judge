@@ -1,0 +1,32 @@
+@use "../base/variables" as *;
+
+// footer
+.footer {
+  margin-top: 100px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #848484;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  background: #f8f8f8;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+  }
+
+  &__left {
+  }
+
+  &__right {
+    display: flex;
+    gap: 50px;
+    li a {
+      transition: all 0.3s;
+    }
+    li a:hover {
+      color: #848484b0;
+    }
+  }
+}

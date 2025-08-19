@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- шрифт для 75% -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wdth,wght@75,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- шрифт для 87% -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wdth,wght@87.5,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/libs/slim-select/slimselect.css" />
+    <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Template-vite.1.0.</title>
+  </head>
+  <body>
+    @@include('../components/header.html')
+    <main class="main-home">
+      <div class="container">
+        <div class="main-home__wrapper">
+          <img
+            src="assets/images/men.png"
+            alt="img"
+            width="300"
+            height="375"
+            class="main-home__img"
+          />
+          <div class="main-home__body">
+            <h2 class="main-home__title">יוסף אלרון</h2>
+            <p>
+              שופט בית המשפט העליון בדימוס יוסף אלרון, אשר נולד ב־1955, שימש
+              כשופט בבית המשפט העליון מאז 2017. יוסף אלרון החל את דרכו המקצועית
+              לאחר שסיים תואר ראשון במשפטים באנגליה (1982) והוסמך כעורך דין
+              (1985). במהלך דרכו סיים גם תואר שני במדעי החברה בישראל (2001).
+            </p>
+            <p>
+              יוסף אלרון מילא תפקיד בפרקליטות מחוז חיפה, ומשם התקדם להיות שופט
+              בית משפט השלום (1994), שופט בבית המשפט המחוזי בחיפה (2003), סגן
+              נשיא בית המשפט המחוזי בחיפה (2012) ונשיא בית המשפט המחוזי בחיפה
+              (2013). יוסף אלרון הציג את מועמדותו לראשות בית המשפט העליון (2023)
+              ופרש בספטמבר 2025.
+            </p>
+            <p>
+              בין יתר תפקידי המפתח אשר נשא בהם יוסף אלרון במהלך דרכו המקצועית
+              היו:
+            </p>
+            <ul>
+              <li>אחראי על המחלקה הפלילית בבית המשפט המחוזי</li>
+              <li>שופט בבית הדין הצבאי במחוז הצפון בשירות מילואים</li>
+              <li>שופט צבאי במילואים בבית הדין הצבאי לערעורים</li>
+              <li>יו"ר הוועדה הבוחנת של לשכת עורכי הדין</li>
+            </ul>
+            <p>
+              יוסף אלרון היה חלוץ ופורץ דרך בתחום עבירות ההמתה, במהלך כהונתו שפט
+              בלמעלה מ־100 משפטים ולפסקי הדין שלו ישנה השפעה...
+            </p>
+          </div>
+
+          @@include('../components/sidebar-featured-topics.html')
+        </div>
+      </div>
+
+      <!-- <style>
+        .demo__btns-tip-color {
+        }
+        .demo__btns-tip-color--columns {
+          display: flex;
+          justify-content: space-between;
+        }
+        .demo__btns-tip-color--column {
+        }
+        .demo__title {
+          margin-bottom: 30px;
+          font-size: 20px;
+          font-weight: 800;
+        }
+        .demo__list li {
+          margin-bottom: 10px;
+        }
+        .demo__list-color li {
+          width: 100px;
+          height: 100px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid #000;
+        }
+      </style>
+
+      <section class="demo__btns-tip-color">
+        <div class="container">
+          <div class="demo__btns-tip-color--columns">
+            <div class="demo__btns-tip-color--column">
+              <h2 class="demo__title">Типография</h2>
+              <ul class="demo__list">
+                <li><h1>заголовок h1</h1></li>
+                <li><h2>заголовок h2</h2></li>
+                <li><h3>заголовок h3</h3></li>
+                <li><h4>заголовок h4</h4></li>
+                <li><h5>заголовок h5</h5></li>
+                <li><h6>заголовок h6</h6></li>
+                <li><p>текст p</p></li>
+              </ul>
+            </div>
+            <div class="demo__btns-tip-color--column">
+              <h2 class="demo__title">Цветовая палитра</h2>
+              <ul class="demo__list demo__list-color">
+                <li>$color-primary</li>
+                <li>$color-secondary</li>
+                <li>$color-text</li>
+              </ul>
+            </div>
+            <div class="demo__btns-tip-color--column">
+              <h2 class="demo__title">Кнопки</h2>
+              <ul class="demo__list">
+                <li>
+                  <button class="button">button</button>
+                </li>
+                <li>
+                  <button class="button button--primary">button primary</button>
+                </li>
+                <li>
+                  <button class="button button--secondary">
+                    button secondary
+                  </button>
+                </li>
+                <li>
+                  <button class="button button--outline">button outline</button>
+                </li>
+                <li>
+                  <button class="button button--ghost">button ghost</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <div class="none">
+        <!-- br -->
+        @@include('../components/sec-form.html')
+        <!-- br -->
+        @@include('../components/sec-slider.html')
+      </div>
+    </main>
+    @@include('../components/footer.html')
+
+    <!-- <script src="assets/libs/slim-select/slimselect.min.js"></script>
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script> -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

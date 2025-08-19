@@ -1,0 +1,28 @@
+@use "variables" as *;
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Noto Sans Hebrew", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+main {
+  flex: 1;
+}
+
+.padding-section {
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1290px;
+  margin: 0 auto;
+}
+
+.none {
+  display: none;
+}

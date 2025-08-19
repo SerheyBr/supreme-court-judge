@@ -1,0 +1,41 @@
+@use "../base/variables" as *;
+
+.button {
+  padding: 10px 10px;
+  border-radius: 15px;
+  background-color: grey;
+  transition: all 0.3s;
+  user-select: none;
+  display: inline-block;
+  width: auto;
+  font-size: $font-size-md;
+
+  &:hover {
+    opacity: 0.7;
+  }
+  &--primary {
+    color: #fff;
+    // background-color: $color-primary;
+    &:hover {
+    }
+  }
+  &--secondary {
+    color: #fff;
+    // background-color: $color-secondary;
+    &:hover {
+    }
+  }
+  &--outline {
+    // border: 1px solid $color-primary;
+    // color: $color-primary;
+    background-color: inherit;
+    &:hover {
+    }
+  }
+  &--ghost {
+    // color: $color-primary;
+    background-color: inherit;
+    &:hover {
+    }
+  }
+}

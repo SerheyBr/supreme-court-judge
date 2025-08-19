@@ -1,0 +1,19 @@
+// базовые
+@use "modules/base/reset";
+@use "modules/base/variables";
+
+// глобальные
+@use "modules/base/base";
+
+// компоненты
+
+@use "modules/components/buttons";
+@use "modules/components/custom-swiper";
+@use "modules/components/footer";
+@use "modules/components/header";
+@use "modules/components/forms";
+@use "modules/components/input-select";
+@use "modules/components/sidebar-featured-topics";
+
+// страницы
+@use "modules/components/pages";
