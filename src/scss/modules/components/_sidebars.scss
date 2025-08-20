@@ -42,10 +42,12 @@
     }
   }
 }
-// sidebar legal-practice end
+// sidebar legal-practice start
 .sidebar-legal-practice {
-  // position: fixed;
+  position: fixed;
   width: 300px;
+  overflow: auto;
+  height: 60vh;
   overflow: auto;
   &__title {
     font-weight: 400;
@@ -57,14 +59,15 @@
 
   &__list {
     position: relative;
+    list-style: none;
     &::after {
       content: "";
       position: absolute;
       top: 0;
       right: 10px;
-      transform: translateY(0);
+      transform: translateY(2px);
       width: 1px;
-      height: 100%;
+      height: 99%;
       border-radius: 50%;
       background-color: #d9d9d9;
     }
@@ -78,6 +81,10 @@
       position: relative;
       padding-right: 35px;
       cursor: pointer;
+
+      &:hover::after {
+        border: 5px solid #00000090;
+      }
       &::after {
         content: "";
         position: absolute;
@@ -89,7 +96,8 @@
         border-radius: 50%;
         background-color: #d9d9d9;
         z-index: 1;
-        // border: 5px solid #000;
+        border: 5px solid #d9d9d9;
+        transition: all 0.3s;
       }
       &.active {
         &::after {
@@ -100,4 +108,67 @@
   }
 }
 
-// sidebar legal-practice start
+// sidebar legal-practice end
+
+// sidebar judgments start
+.sidebar-judgments {
+  margin-top: 20px;
+  &__title {
+    font-weight: 400;
+    font-size: 24px;
+    text-align: right;
+    color: $dark-blue;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    text-align: right;
+    color: #000;
+    li {
+      position: relative;
+    }
+  }
+
+  &__item-ghost {
+    padding: 15px 0px;
+    background: inherit;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    margin-bottom: 10px;
+  }
+
+  &__item-fill {
+    padding: 15px 30px;
+    background: $light-grey;
+    margin-bottom: 15px;
+    border-radius: 10px;
+  }
+
+  &__bonus-item {
+    position: absolute;
+    left: -11px;
+    top: 50%;
+    transform: translate(-100%, -50%);
+  }
+
+  &__bonus-item-title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: right;
+    color: #000;
+    margin-bottom: 4px;
+  }
+
+  &__bonus-item-subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: right;
+    color: #8f8f8f;
+  }
+}
+// sidebar judgments end

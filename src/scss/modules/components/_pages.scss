@@ -56,6 +56,10 @@
 
   &__img {
   }
+  &__sidebar {
+    width: 300px;
+    flex-shrink: 0;
+  }
 }
 
 // home page end
@@ -67,16 +71,19 @@
   }
 
   &__sidebar {
+    margin-top: 25px;
     position: relative;
     width: 300px;
-    overflow: hidden;
+
     flex-shrink: 0;
   }
 
   &__body {
     padding-left: 30px;
   }
-
+  &__tags {
+    margin-bottom: 30px;
+  }
   &__body-top {
   }
 
@@ -96,3 +103,7 @@
   }
 }
 // legal-practice page end
+
+//background page start
+// ...
+//background page end

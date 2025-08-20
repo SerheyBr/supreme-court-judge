@@ -162,6 +162,11 @@ main {
   display: none;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 160px;
+}
+
 .button {
   padding: 10px 10px;
   border-radius: 15px;
@@ -490,6 +495,7 @@ main {
   text-align: right;
   color: #032169;
   margin-bottom: 20px;
+  font-stretch: 80%;
 }
 .legal-practice-post__text {
   font-weight: 400;
@@ -502,6 +508,22 @@ main {
 .legal-practice-post__text p {
   margin-bottom: 20px;
 }
+.legal-practice-post__text--full {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.legal-practice-post__text--full.active {
+  max-height: 100%;
+  overflow: visible;
+  opacity: 1;
+  position: static;
+}
 .legal-practice-post__btn {
   display: flex;
   align-items: center;
@@ -511,6 +533,227 @@ main {
   font-size: 16px;
   line-height: 100%;
   color: #0e7bcd;
+}
+.legal-practice-post__btn svg {
+  transition: all 0.3s;
+}
+.legal-practice-post__btn.active svg {
+  transform: rotate(180deg);
+}
+
+.landmarks-post {
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+  display: flex;
+}
+.landmarks-post__title-box {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: right;
+  color: #032169;
+  margin-bottom: 20px;
+  width: 300px;
+  flex-shrink: 0;
+  margin-left: 30px;
+}
+.landmarks-post__title-top {
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 100%;
+  font-stretch: 80%;
+}
+.landmarks-post__title-bottom {
+  font-size: 24px;
+  font-stretch: 80%;
+}
+.landmarks-post__text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: right;
+  color: #000;
+  margin-bottom: 20px;
+}
+.landmarks-post__text p {
+  margin-bottom: 20px;
+}
+.landmarks-post__text--full {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.3s;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.landmarks-post__text--full.active {
+  max-height: 100%;
+  overflow: visible;
+  opacity: 1;
+  position: static;
+}
+.landmarks-post__btn {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  gap: 2px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #0e7bcd;
+}
+.landmarks-post__btn svg {
+  transition: all 0.3s;
+}
+.landmarks-post__btn.active svg {
+  transform: rotate(180deg);
+}
+
+.judgments-post {
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+  display: flex;
+}
+.judgments-post__title-box {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: right;
+  color: #032169;
+  margin-bottom: 20px;
+  width: 300px;
+  flex-shrink: 0;
+  margin-left: 30px;
+  font-stretch: 80%;
+}
+.judgments-post__title-top {
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 100%;
+}
+.judgments-post__title-bottom {
+  font-size: 24px;
+}
+.judgments-post__text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: right;
+  color: #000;
+  margin-bottom: 20px;
+}
+.judgments-post__text p {
+  margin-bottom: 10px;
+}
+.judgments-post__text--full {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.judgments-post__text--full.active {
+  max-height: 100%;
+  overflow: visible;
+  opacity: 1;
+  position: static;
+}
+.judgments-post__btn {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  gap: 2px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #0e7bcd;
+}
+.judgments-post__btn svg {
+  transition: all 0.3s;
+}
+.judgments-post__btn.active svg {
+  transform: rotate(180deg);
+}
+
+.articles-post {
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+  display: flex;
+}
+.articles-post__img {
+  border-radius: 10px;
+  width: 300px;
+  height: 165px;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin-left: 30px;
+}
+.articles-post__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 130%;
+  text-align: right;
+  color: #000;
+  margin-bottom: 5px;
+}
+.articles-post__subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  text-align: right;
+  color: #032169;
+  margin-bottom: 10px;
+}
+.articles-post__text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: right;
+  color: #000;
+  margin-bottom: 20px;
+}
+.articles-post__text p {
+  margin-bottom: 10px;
+}
+.articles-post__text--full {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.articles-post__text--full.active {
+  max-height: 100%;
+  overflow: visible;
+  opacity: 1;
+  position: static;
+}
+.articles-post__btn {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  gap: 2px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #0e7bcd;
+}
+.articles-post__btn svg {
+  transition: all 0.3s;
+}
+.articles-post__btn.active svg {
+  transform: rotate(180deg);
 }
 
 .sidebar-featured-topics {
@@ -551,7 +794,10 @@ main {
 }
 
 .sidebar-legal-practice {
+  position: fixed;
   width: 300px;
+  overflow: auto;
+  height: 60vh;
   overflow: auto;
 }
 .sidebar-legal-practice__title {
@@ -563,15 +809,16 @@ main {
 }
 .sidebar-legal-practice__list {
   position: relative;
+  list-style: none;
 }
 .sidebar-legal-practice__list::after {
   content: "";
   position: absolute;
   top: 0;
   right: 10px;
-  transform: translateY(0);
+  transform: translateY(2px);
   width: 1px;
-  height: 100%;
+  height: 99%;
   border-radius: 50%;
   background-color: #d9d9d9;
 }
@@ -586,6 +833,9 @@ main {
   padding-right: 35px;
   cursor: pointer;
 }
+.sidebar-legal-practice__list li:hover::after {
+  border: 5px solid rgba(0, 0, 0, 0.5647058824);
+}
 .sidebar-legal-practice__list li::after {
   content: "";
   position: absolute;
@@ -597,9 +847,85 @@ main {
   border-radius: 50%;
   background-color: #d9d9d9;
   z-index: 1;
+  border: 5px solid #d9d9d9;
+  transition: all 0.3s;
 }
 .sidebar-legal-practice__list li.active::after {
   border: 5px solid #000;
+}
+
+.sidebar-judgments {
+  margin-top: 20px;
+}
+.sidebar-judgments__title {
+  font-weight: 400;
+  font-size: 24px;
+  text-align: right;
+  color: #032169;
+  margin-bottom: 20px;
+}
+.sidebar-judgments__list {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  text-align: right;
+  color: #000;
+}
+.sidebar-judgments__list li {
+  position: relative;
+}
+.sidebar-judgments__item-ghost {
+  padding: 15px 0px;
+  background: inherit;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  margin-bottom: 10px;
+}
+.sidebar-judgments__item-fill {
+  padding: 15px 30px;
+  background: #e6e6e6;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+.sidebar-judgments__bonus-item {
+  position: absolute;
+  left: -11px;
+  top: 50%;
+  transform: translate(-100%, -50%);
+}
+.sidebar-judgments__bonus-item-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  text-align: right;
+  color: #000;
+  margin-bottom: 4px;
+}
+.sidebar-judgments__bonus-item-subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: right;
+  color: #8f8f8f;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+}
+.tags__tag {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: right;
+  color: #0e7bcd;
+  background: #e6e6e6;
+  border-radius: 10px;
+  padding: 5px 7px;
+}
+.tags__tag.active {
+  color: #fff;
+  background: #bfbfc1;
 }
 
 .main-home {
@@ -652,6 +978,11 @@ main {
   color: #032169;
   margin-bottom: 30px;
 }
+.main-home__sidebar {
+  width: 300px;
+  flex-shrink: 0;
+}
+
 .legal-practice {
   margin-top: 176px;
 }
@@ -659,13 +990,16 @@ main {
   display: flex;
 }
 .legal-practice__sidebar {
+  margin-top: 25px;
   position: relative;
   width: 300px;
-  overflow: hidden;
   flex-shrink: 0;
 }
 .legal-practice__body {
   padding-left: 30px;
+}
+.legal-practice__tags {
+  margin-bottom: 30px;
 }
 .legal-practice__title {
   font-weight: 600;

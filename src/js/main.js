@@ -1,3 +1,121 @@
+// active btn show more for legal practice posts
+
+if (document.querySelectorAll(".legal-practice-post")) {
+  const posts = document.querySelectorAll(".legal-practice-post");
+
+  posts.forEach((post) => {
+    const btn = post.querySelector(".legal-practice-post__btn-read-more");
+    const full = post.querySelector(".legal-practice-post__text--full");
+
+    btn.addEventListener("click", (e) => {
+      full.classList.toggle("active");
+      btn.classList.toggle("active");
+    });
+  });
+}
+// active btn show more for landmarks posts
+
+if (document.querySelectorAll(".landmarks-post")) {
+  const posts = document.querySelectorAll(".landmarks-post");
+
+  posts.forEach((post) => {
+    const btn = post.querySelector(".landmarks-post__btn-read-more");
+    const full = post.querySelector(".landmarks-post__text--full");
+
+    btn.addEventListener("click", (e) => {
+      full.classList.toggle("active");
+      btn.classList.toggle("active");
+    });
+  });
+}
+
+// active btn show more for judgments posts
+
+if (document.querySelectorAll(".judgments-post")) {
+  const posts = document.querySelectorAll(".judgments-post");
+
+  posts.forEach((post) => {
+    const btn = post.querySelector(".judgments-post__btn-read-more");
+    const full = post.querySelector(".judgments-post__text--full");
+
+    btn.addEventListener("click", (e) => {
+      full.classList.toggle("active");
+      btn.classList.toggle("active");
+    });
+  });
+}
+
+// active btn show more for articles posts
+
+if (document.querySelectorAll(".articles-post")) {
+  const posts = document.querySelectorAll(".articles-post");
+
+  posts.forEach((post) => {
+    const btn = post.querySelector(".articles-post__btn-read-more");
+    const full = post.querySelector(".articles-post__text--full");
+
+    btn.addEventListener("click", (e) => {
+      full.classList.toggle("active");
+      btn.classList.toggle("active");
+    });
+  });
+}
+
+// active tags
+if (document.querySelectorAll(".tags")) {
+  const tags = document.querySelectorAll(".tags__tag");
+
+  tags.forEach((tag) => {
+    tag.addEventListener("click", (e) => {
+      tag.classList.toggle("active");
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Инициализация GSAP ScrollTrigger
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Получаем все посты и пункты меню
+  const posts = document.querySelectorAll(".legal-practice-post");
+  const menuItems = document.querySelectorAll(
+    ".sidebar-legal-practice__list li"
+  );
+
+  // Функция для обновления активного пункта меню
+  function updateActiveMenuItem(postId) {
+    // Убираем класс активности у всех пунктов меню
+    menuItems.forEach((item) => {
+      item.classList.remove("active");
+    });
+
+    // Находим пункт меню с ссылкой на этот пост
+    const activeMenuItem = document
+      .querySelector(`.sidebar-legal-practice__list li a[href="#${postId}"]`)
+      ?.closest("li");
+
+    // Добавляем класс активности
+    if (activeMenuItem) {
+      activeMenuItem.classList.add("active");
+    }
+  }
+
+  posts.forEach((post) => {
+    const postId = post.id;
+
+    ScrollTrigger.create({
+      trigger: post,
+      //   start: "top center", // когда верх поста в центре экрана
+      //   end: "bottom center", // когда низ поста в центре экрана
+      start: "center center", // когда верх поста в центре экрана
+      end: "bottom center", // когда низ поста в центре экрана
+      markers: false,
+      onEnter: () => updateActiveMenuItem(postId),
+      onEnterBack: () => updateActiveMenuItem(postId),
+    });
+  });
+});
+
 // document.addEventListener("DOMContentLoaded", function () {
 //   new SlimSelect({
 //     select: ".my-form .wpcf7-select",

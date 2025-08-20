@@ -31,20 +31,22 @@
               @@include('../components/breadcrumbs.html')
             </div>
             <div class="legal-practice__content">
-              <h2 class="legal-practice__title">עשייה משפטית</h2>
+              <div class="legal-practice__tags">
+                @@include('../components/tags.html')
+              </div>
               <div class="legal-practice__posts">
-                @@include('../components/legal-practice-post.html', {"id": "1"})
+                @@include('../components/judgments-post.html', {"id": "1"})
                 <!-- br -->
-                @@include('../components/legal-practice-post.html', {"id": "2"})
+                @@include('../components/judgments-post.html', {"id": "2"})
                 <!-- br -->
-                @@include('../components/legal-practice-post.html', {"id": "3"})
+                @@include('../components/judgments-post.html', {"id": "3"})
                 <!-- br -->
-                @@include('../components/legal-practice-post.html', {"id": "4"})
+                @@include('../components/judgments-post.html', {"id": "4"})
               </div>
             </div>
           </div>
-          <div class="legal-practice__sidebar">
-            @@include('../components/sidebar-legal-practice.html')
+          <div class="main-home__sidebar">
+            @@include('../components/sidebar-judgments.html')
           </div>
         </div>
       </div>
