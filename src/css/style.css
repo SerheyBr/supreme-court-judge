@@ -1002,6 +1002,122 @@ html {
   background: #bfbfc1;
 }
 
+.video-modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.video-modal.active {
+  display: flex;
+}
+.video-modal__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.video-modal__left-column-title {
+  font-weight: 400;
+  font-size: 24px;
+  text-align: right;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.video-modal__more-videos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.video-modal__title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+  text-align: right;
+  color: #fff;
+  max-width: 90%;
+  margin: 0 auto;
+}
+.video-modal__content {
+  border-radius: 10px;
+  width: 960px;
+  height: 540px;
+}
+.video-modal__content iframe {
+  width: 100%;
+  height: 100%;
+}
+.video-modal__btn-close {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 5px 15px;
+  height: 34px;
+  background: #000;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.additional-video {
+  position: relative;
+  width: 300px;
+  height: 170px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 20px;
+}
+.additional-video::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2470588235);
+}
+.additional-video__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.additional-video__title {
+  position: relative;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: right;
+  color: #fff;
+  margin-bottom: 2px;
+}
+.additional-video__subtitle {
+  position: relative;
+  z-index: 1;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  text-align: right;
+  color: #fff;
+}
+
 .main-home {
   margin-top: 201px;
 }

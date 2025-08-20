@@ -1,0 +1,126 @@
+@use "../base/variables" as *;
+
+.video-modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+
+  &.active {
+    display: flex;
+  }
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  &__left-column {
+  }
+  &__left-column-title {
+    font-weight: 400;
+    font-size: 24px;
+    text-align: right;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  &__more-videos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 140%;
+    text-align: right;
+    color: #fff;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  &__content {
+    border-radius: 10px;
+    width: 960px;
+    height: 540px;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__btn-close {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 5px 15px;
+    // width: 91px;
+    height: 34px;
+    background: #000;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+}
+
+.additional-video {
+  position: relative;
+  width: 300px;
+  height: 170px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 20px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000003f;
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+    text-align: right;
+    color: #fff;
+    margin-bottom: 2px;
+  }
+
+  &__subtitle {
+    position: relative;
+    z-index: 1;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    text-align: right;
+    color: #fff;
+  }
+}
