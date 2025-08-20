@@ -297,3 +297,87 @@
   }
 }
 // articles-post end
+
+// lecture-post start
+.lectures-post {
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+  display: flex;
+  &__img {
+    border-radius: 10px;
+    width: 300px;
+    height: 165px;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin-left: 30px;
+  }
+
+  &__content {
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+    text-align: right;
+    color: #000;
+    margin-bottom: 5px;
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    text-align: right;
+    color: $dark-blue;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    text-align: right;
+    color: #000;
+    margin-bottom: 20px;
+    p {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text--full {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  &__text--full.active {
+    max-height: 100%;
+    overflow: visible;
+    opacity: 1;
+    position: static;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    gap: 2px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: $light-blue;
+    svg {
+      transition: all 0.3s;
+    }
+  }
+  &__btn.active svg {
+    transform: rotate(180deg);
+  }
+}
+// lecture-post end
