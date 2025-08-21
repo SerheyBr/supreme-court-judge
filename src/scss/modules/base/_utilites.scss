@@ -1,0 +1,56 @@
+@use "variables" as *;
+
+.none {
+  display: none;
+}
+
+.button-show-more {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  gap: 2px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: $light-blue;
+  svg {
+    transition: all 0.3s;
+  }
+  &.active svg {
+    transform: rotate(180deg);
+  }
+}
+
+.show-full-text {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  &.active {
+    max-height: 100%;
+    overflow: visible;
+    opacity: 1;
+    position: static;
+  }
+}
+
+// &__text--full {
+//   max-height: 0;
+//   overflow: hidden;
+//   opacity: 0;
+//   transition: all 0.3s;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   z-index: -1;
+// }
+// &__text--full.active {
+//   max-height: 100%;
+//   overflow: visible;
+//   opacity: 1;
+//   position: static;
+// }

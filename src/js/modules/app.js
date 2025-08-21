@@ -1,81 +1,86 @@
+// function show / don't show fulltext
+function toggleShowFullTextForPost(classNamePosts) {
+  if (document.querySelectorAll(classNamePosts)) {
+    const posts = document.querySelectorAll(classNamePosts);
+
+    posts.forEach((post) => {
+      const btn = post.querySelector(".button-show-more");
+      const fullText = post.querySelector(".show-full-text");
+
+      btn.addEventListener("click", (e) => {
+        fullText.classList.toggle("active");
+        btn.classList.toggle("active");
+      });
+    });
+  }
+}
+toggleShowFullTextForPost(".legal-practice-post");
+toggleShowFullTextForPost(".landmarks-post");
+toggleShowFullTextForPost(".articles-post");
+toggleShowFullTextForPost(".book__item");
+
 // active btn show more for legal practice posts
 
-if (document.querySelectorAll(".legal-practice-post")) {
-  const posts = document.querySelectorAll(".legal-practice-post");
+// if (document.querySelectorAll(".legal-practice-post")) {
+//   const posts = document.querySelectorAll(".legal-practice-post");
 
-  posts.forEach((post) => {
-    const btn = post.querySelector(".legal-practice-post__btn-read-more");
-    const full = post.querySelector(".legal-practice-post__text--full");
+//   posts.forEach((post) => {
+//     const btn = post.querySelector(".button-show-more");
+//     const full = post.querySelector(".show-full-text");
 
-    btn.addEventListener("click", (e) => {
-      full.classList.toggle("active");
-      btn.classList.toggle("active");
-    });
-  });
-}
+//     btn.addEventListener("click", (e) => {
+//       full.classList.toggle("active");
+//       btn.classList.toggle("active");
+//     });
+//   });
+// }
 // active btn show more for landmarks posts
 
-if (document.querySelectorAll(".landmarks-post")) {
-  const posts = document.querySelectorAll(".landmarks-post");
+// if (document.querySelectorAll(".landmarks-post")) {
+//   const posts = document.querySelectorAll(".landmarks-post");
 
-  posts.forEach((post) => {
-    const btn = post.querySelector(".landmarks-post__btn-read-more");
-    const full = post.querySelector(".landmarks-post__text--full");
+//   posts.forEach((post) => {
+//     const btn = post.querySelector(".button-show-more");
+//     const full = post.querySelector(".show-full-text");
 
-    btn.addEventListener("click", (e) => {
-      full.classList.toggle("active");
-      btn.classList.toggle("active");
-    });
-  });
-}
-
-// active btn show more for judgments posts
-
-if (document.querySelectorAll(".judgments-post")) {
-  const posts = document.querySelectorAll(".judgments-post");
-
-  posts.forEach((post) => {
-    const btn = post.querySelector(".judgments-post__btn-read-more");
-    const full = post.querySelector(".judgments-post__text--full");
-
-    btn.addEventListener("click", (e) => {
-      full.classList.toggle("active");
-      btn.classList.toggle("active");
-    });
-  });
-}
+//     btn.addEventListener("click", (e) => {
+//       full.classList.toggle("active");
+//       btn.classList.toggle("active");
+//     });
+//   });
+// }
 
 // active btn show more for articles posts
 
-if (document.querySelectorAll(".articles-post")) {
-  const posts = document.querySelectorAll(".articles-post");
+// if (document.querySelectorAll(".articles-post")) {
+//   const posts = document.querySelectorAll(".articles-post");
 
-  posts.forEach((post) => {
-    const btn = post.querySelector(".articles-post__btn-read-more");
-    const full = post.querySelector(".articles-post__text--full");
+//   posts.forEach((post) => {
+//     const btn = post.querySelector(".button-show-more");
+//     const full = post.querySelector(".show-full-text");
 
-    btn.addEventListener("click", (e) => {
-      full.classList.toggle("active");
-      btn.classList.toggle("active");
-    });
-  });
-}
+//     btn.addEventListener("click", (e) => {
+//       full.classList.toggle("active");
+//       btn.classList.toggle("active");
+//     });
+//   });
+// }
 
 // book btn show more for articles posts
 
-if (document.querySelectorAll(".book__item")) {
-  const posts = document.querySelectorAll(".book__item");
+// if (document.querySelectorAll(".book__item")) {
+//   const posts = document.querySelectorAll(".book__item");
 
-  posts.forEach((post) => {
-    const btn = post.querySelector(".legal-practice-post__btn-read-more");
-    const full = post.querySelector(".book__text--full");
+//   posts.forEach((post) => {
+//     const btn = post.querySelector(".button-show-more");
+//     const full = post.querySelector(".show-full-text");
 
-    btn.addEventListener("click", (e) => {
-      full.classList.toggle("active");
-      btn.classList.toggle("active");
-    });
-  });
-}
+//     btn.addEventListener("click", (e) => {
+//       full.classList.toggle("active");
+//       btn.classList.toggle("active");
+//     });
+//   });
+// }
 
 // active tags
 if (document.querySelectorAll(".tags")) {

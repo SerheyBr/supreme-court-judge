@@ -135,6 +135,44 @@ input[type=search]::-webkit-search-cancel-button {
   display: none;
 }
 
+.none {
+  display: none;
+}
+
+.button-show-more {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  gap: 2px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #0e7bcd;
+}
+.button-show-more svg {
+  transition: all 0.3s;
+}
+.button-show-more.active svg {
+  transform: rotate(180deg);
+}
+
+.show-full-text {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.show-full-text.active {
+  max-height: 100%;
+  overflow: visible;
+  opacity: 1;
+  position: static;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -156,10 +194,6 @@ main {
 .container {
   max-width: 1290px;
   margin: 0 auto;
-}
-
-.none {
-  display: none;
 }
 
 html {
@@ -509,39 +543,6 @@ html {
 .legal-practice-post__text p {
   margin-bottom: 20px;
 }
-.legal-practice-post__text--full {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: all 0.3s;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-.legal-practice-post__text--full.active {
-  max-height: 100%;
-  overflow: visible;
-  opacity: 1;
-  position: static;
-}
-.legal-practice-post__btn {
-  display: flex;
-  align-items: center;
-  margin-right: auto;
-  gap: 2px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 100%;
-  color: #0e7bcd;
-}
-.legal-practice-post__btn svg {
-  transition: all 0.3s;
-}
-.legal-practice-post__btn.active svg {
-  transform: rotate(180deg);
-}
-
 .landmarks-post {
   padding-bottom: 15px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -580,39 +581,6 @@ html {
 .landmarks-post__text p {
   margin-bottom: 20px;
 }
-.landmarks-post__text--full {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  position: absolute;
-  transition: all 0.3s;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-.landmarks-post__text--full.active {
-  max-height: 100%;
-  overflow: visible;
-  opacity: 1;
-  position: static;
-}
-.landmarks-post__btn {
-  display: flex;
-  align-items: center;
-  margin-right: auto;
-  gap: 2px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 100%;
-  color: #0e7bcd;
-}
-.landmarks-post__btn svg {
-  transition: all 0.3s;
-}
-.landmarks-post__btn.active svg {
-  transform: rotate(180deg);
-}
-
 .judgments-post {
   padding-bottom: 15px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -650,22 +618,6 @@ html {
 .judgments-post__text p {
   margin-bottom: 10px;
 }
-.judgments-post__text--full {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: all 0.3s;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-.judgments-post__text--full.active {
-  max-height: 100%;
-  overflow: visible;
-  opacity: 1;
-  position: static;
-}
 .judgments-post__btn {
   display: flex;
   align-items: center;
@@ -675,12 +627,6 @@ html {
   font-size: 16px;
   line-height: 100%;
   color: #0e7bcd;
-}
-.judgments-post__btn svg {
-  transition: all 0.3s;
-}
-.judgments-post__btn.active svg {
-  transform: rotate(180deg);
 }
 
 .articles-post {
@@ -724,39 +670,6 @@ html {
 .articles-post__text p {
   margin-bottom: 10px;
 }
-.articles-post__text--full {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: all 0.3s;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-.articles-post__text--full.active {
-  max-height: 100%;
-  overflow: visible;
-  opacity: 1;
-  position: static;
-}
-.articles-post__btn {
-  display: flex;
-  align-items: center;
-  margin-right: auto;
-  gap: 2px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 100%;
-  color: #0e7bcd;
-}
-.articles-post__btn svg {
-  transition: all 0.3s;
-}
-.articles-post__btn.active svg {
-  transform: rotate(180deg);
-}
-
 .lectures-post {
   padding-bottom: 15px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -798,37 +711,15 @@ html {
 .lectures-post__text p {
   margin-bottom: 10px;
 }
-.lectures-post__text--full {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: all 0.3s;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-.lectures-post__text--full.active {
-  max-height: 100%;
-  overflow: visible;
-  opacity: 1;
-  position: static;
-}
 .lectures-post__btn {
   display: flex;
   align-items: center;
+  gap: 10px;
   margin-right: auto;
-  gap: 2px;
   font-weight: 400;
   font-size: 16px;
   line-height: 100%;
   color: #0e7bcd;
-}
-.lectures-post__btn svg {
-  transition: all 0.3s;
-}
-.lectures-post__btn.active svg {
-  transform: rotate(180deg);
 }
 
 .sidebar-featured-topics {
@@ -1237,36 +1128,6 @@ html {
   line-height: 130%;
   text-align: right;
   color: #000;
-}
-.book__text--full {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: all 0.3s;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-.book__text--full h5 {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 120%;
-  text-align: right;
-  color: #032169;
-}
-.book__text--full p {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 130%;
-  text-align: right;
-  color: #000;
-}
-.book__text--full.active {
-  max-height: 100%;
-  overflow: visible;
-  opacity: 1;
-  position: static;
 }
 .book__btn {
   display: flex;
