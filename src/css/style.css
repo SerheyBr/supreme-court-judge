@@ -387,21 +387,17 @@ html {
 }
 
 .my-form {
-  border: 1px solid #000;
-  max-width: 765px;
-  border-radius: 30px;
-  padding: 20px;
+  max-width: 480px;
 }
 
 .my-form .wpcf7-form-control {
-  border-radius: 15px;
   border: 1px solid #000;
-  background: linear-gradient(360deg, #f3f5f9 0%, #f8fafe 100%);
+  border-radius: 5px;
 }
 
 .my-form .wpcf7-text {
-  padding: 20px 0 20px 35px;
-  border-radius: 60px;
+  padding: 13px 15px;
+  border-radius: 5px;
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
@@ -410,7 +406,11 @@ html {
 }
 
 .my-form .wpcf7-textarea {
+  padding: 21px 15px;
   resize: none;
+  max-height: 134px;
+  outline: none;
+  width: 100%;
 }
 
 .my-form .wpcf7-radio {
@@ -418,10 +418,8 @@ html {
 }
 
 .my-form .wpcf7-submit {
-  padding: 20px;
-  width: 100%;
-  box-shadow: inset 0 0 12px 0 rgba(255, 255, 255, 0.45);
-  background: radial-gradient(106.03% 136.67% at 50% 0%, #ffc400 0%, #f90 100%);
+  padding: 10px 30px;
+  background: #d1cdce;
 }
 
 .ss-main {
@@ -481,6 +479,9 @@ html {
   text-align: right;
   color: #032169;
   margin-bottom: 30px;
+}
+.breadcrumbs li::after {
+  display: none;
 }
 
 .legal-practice-post {
@@ -1159,6 +1160,11 @@ html {
 .main-home__body p + ul {
   margin-top: -30px;
 }
+.main-home__content {
+  display: flex;
+  gap: 30px;
+  align-items: self-start;
+}
 .main-home__title {
   margin-top: -10px;
   font-weight: 600;
@@ -1188,6 +1194,17 @@ html {
 .legal-practice__body {
   padding-left: 30px;
 }
+.legal-practice__result-serch {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: right;
+  color: #000;
+  margin-bottom: 20px;
+}
+.legal-practice__result-serch span {
+  color: #0e7bcd;
+}
 .legal-practice__tags {
   margin-bottom: 30px;
 }
@@ -1198,4 +1215,75 @@ html {
   text-align: right;
   color: #032169;
   margin-bottom: 20px;
+}
+.book__title {
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 120%;
+  text-align: right;
+  color: #032169;
+  margin-bottom: 20px;
+}
+.book__text h5 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: right;
+  color: #032169;
+}
+.book__text p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: right;
+  color: #000;
+}
+.book__text--full {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.book__text--full h5 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: right;
+  color: #032169;
+}
+.book__text--full p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: right;
+  color: #000;
+}
+.book__text--full.active {
+  max-height: 100%;
+  overflow: visible;
+  opacity: 1;
+  position: static;
+}
+.book__btn {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  gap: 2px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #0e7bcd;
+}
+.book__btn p {
+  margin-bottom: 0;
+}
+.book__btn svg {
+  transition: all 0.3s;
+}
+.book__btn.active svg {
+  transform: rotate(180deg);
 }

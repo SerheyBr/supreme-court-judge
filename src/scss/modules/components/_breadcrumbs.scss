@@ -9,4 +9,7 @@
   text-align: right;
   color: $dark-blue;
   margin-bottom: 30px;
+  li::after {
+    display: none;
+  }
 }

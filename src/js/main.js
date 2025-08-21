@@ -61,6 +61,22 @@ if (document.querySelectorAll(".articles-post")) {
   });
 }
 
+// book btn show more for articles posts
+
+if (document.querySelectorAll(".book__item")) {
+  const posts = document.querySelectorAll(".book__item");
+
+  posts.forEach((post) => {
+    const btn = post.querySelector(".legal-practice-post__btn-read-more");
+    const full = post.querySelector(".book__text--full");
+
+    btn.addEventListener("click", (e) => {
+      full.classList.toggle("active");
+      btn.classList.toggle("active");
+    });
+  });
+}
+
 // active tags
 if (document.querySelectorAll(".tags")) {
   const tags = document.querySelectorAll(".tags__tag");

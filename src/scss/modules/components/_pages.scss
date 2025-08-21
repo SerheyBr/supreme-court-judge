@@ -43,7 +43,11 @@
       margin-top: -30px;
     }
   }
-
+  &__content {
+    display: flex;
+    gap: 30px;
+    align-items: self-start;
+  }
   &__title {
     margin-top: -10px;
     font-weight: 600;
@@ -81,6 +85,17 @@
   &__body {
     padding-left: 30px;
   }
+  &__result-serch {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    text-align: right;
+    color: #000;
+    margin-bottom: 20px;
+    span {
+      color: $light-blue;
+    }
+  }
   &__tags {
     margin-bottom: 30px;
   }
@@ -104,6 +119,92 @@
 }
 // legal-practice page end
 
-//background page start
-// ...
-//background page end
+//book page start
+.book {
+  &__content {
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 120%;
+    text-align: right;
+    color: $dark-blue;
+    margin-bottom: 20px;
+  }
+
+  &__items {
+  }
+
+  &__item {
+  }
+
+  &__text {
+    h5 {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 120%;
+      text-align: right;
+      color: $dark-blue;
+    }
+    p {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 130%;
+      text-align: right;
+      color: #000;
+    }
+  }
+
+  &__text--full {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    h5 {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 120%;
+      text-align: right;
+      color: $dark-blue;
+    }
+    p {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 130%;
+      text-align: right;
+      color: #000;
+    }
+  }
+  &__text--full.active {
+    max-height: 100%;
+    overflow: visible;
+    opacity: 1;
+    position: static;
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    gap: 2px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: $light-blue;
+    p {
+      margin-bottom: 0;
+    }
+    svg {
+      transition: all 0.3s;
+    }
+  }
+  &__btn.active svg {
+    transform: rotate(180deg);
+  }
+}
+
+//book page end

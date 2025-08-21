@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- шрифт для 75% -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wdth,wght@75,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- шрифт для 87% -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wdth,wght@87.5,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/libs/slim-select/slimselect.css" />
+    <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Template-vite.1.0.</title>
+  </head>
+  <body>
+    @@include('../components/header.html')
+    <main class="main-home">
+      <div class="container">
+        <div class="main-home__wrapper">
+          <img
+            src="assets/images/contacts-img.png"
+            alt="img"
+            width="300"
+            height="375"
+            class="main-home__img"
+          />
+          <div class="main-home__body contacts">
+            <div class="contacts__title">
+              <p>מבקר.ת יקר.ה</p>
+              <p>
+                תודה על התעניינותך באתר ובתכניו. אם יש ברצונך להעביר פנייה
+                כלשהיא בנושא האתר, אנא רשום את פרטיך האישיים ואת מהות הפניה, אשר
+                יועברו אל מנהל האתר.
+              </p>
+            </div>
+            <div class="contacts__form">
+              @@include('../components/form.html')
+            </div>
+          </div>
+
+          <div class="main-home__sidebar">
+            @@include('../components/sidebar-featured-topics.html')
+          </div>
+        </div>
+      </div>
+    </main>
+    @@include('../components/footer.html')
+
+    <!-- <script src="assets/libs/slim-select/slimselect.min.js"></script>
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script> -->
+    <script src="assets/libs/gsap/gsap.min.js"></script>
+    <script src="assets/libs/gsap/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

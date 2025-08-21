@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- шрифт для 75% -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wdth,wght@75,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- шрифт для 87% -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wdth,wght@87.5,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/libs/slim-select/slimselect.css" />
+    <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Template-vite.1.0.</title>
+  </head>
+  <body>
+    @@include('../components/header.html')
+    <main class="legal-practice">
+      <div class="container">
+        <div class="legal-practice__wrapper">
+          <div class="legal-practice__body">
+            <div class="legal-practice__body-top">
+              @@include('../components/breadcrumbs.html')
+            </div>
+            <div class="legal-practice__content">
+              <div class="legal-practice__result-serch">
+                <div dir="rtl">
+                  נמצאו <strong>54</strong> תוצאות חיפוש לערך:
+                  <span>עברות המתה</span>
+                </div>
+              </div>
+              <div class="legal-practice__tags">
+                @@include('../components/tags.html')
+              </div>
+              <div class="legal-practice__posts">
+                @@include('../components/judgments-post.html', {"id": "1"})
+                <!-- br -->
+                @@include('../components/landmarks-post.html', {"id": "2"})
+                <!-- br -->
+                @@include('../components/lectures-post.html', {"id": "3"})
+                <!-- br -->
+                @@include('../components/legal-practice-post.html', {"id": "4"})
+              </div>
+            </div>
+          </div>
+          <div class="main-home__sidebar">
+            @@include('../components/sidebar-featured-topics.html')
+          </div>
+        </div>
+      </div>
+    </main>
+    @@include('../components/footer.html')
+
+    <!-- <script src="assets/libs/slim-select/slimselect.min.js"></script>
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script> -->
+    <script src="assets/libs/gsap/gsap.min.js"></script>
+    <script src="assets/libs/gsap/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
