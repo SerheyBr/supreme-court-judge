@@ -19,69 +19,6 @@ toggleShowFullTextForPost(".landmarks-post");
 toggleShowFullTextForPost(".articles-post");
 toggleShowFullTextForPost(".book__item");
 
-// active btn show more for legal practice posts
-
-// if (document.querySelectorAll(".legal-practice-post")) {
-//   const posts = document.querySelectorAll(".legal-practice-post");
-
-//   posts.forEach((post) => {
-//     const btn = post.querySelector(".button-show-more");
-//     const full = post.querySelector(".show-full-text");
-
-//     btn.addEventListener("click", (e) => {
-//       full.classList.toggle("active");
-//       btn.classList.toggle("active");
-//     });
-//   });
-// }
-// active btn show more for landmarks posts
-
-// if (document.querySelectorAll(".landmarks-post")) {
-//   const posts = document.querySelectorAll(".landmarks-post");
-
-//   posts.forEach((post) => {
-//     const btn = post.querySelector(".button-show-more");
-//     const full = post.querySelector(".show-full-text");
-
-//     btn.addEventListener("click", (e) => {
-//       full.classList.toggle("active");
-//       btn.classList.toggle("active");
-//     });
-//   });
-// }
-
-// active btn show more for articles posts
-
-// if (document.querySelectorAll(".articles-post")) {
-//   const posts = document.querySelectorAll(".articles-post");
-
-//   posts.forEach((post) => {
-//     const btn = post.querySelector(".button-show-more");
-//     const full = post.querySelector(".show-full-text");
-
-//     btn.addEventListener("click", (e) => {
-//       full.classList.toggle("active");
-//       btn.classList.toggle("active");
-//     });
-//   });
-// }
-
-// book btn show more for articles posts
-
-// if (document.querySelectorAll(".book__item")) {
-//   const posts = document.querySelectorAll(".book__item");
-
-//   posts.forEach((post) => {
-//     const btn = post.querySelector(".button-show-more");
-//     const full = post.querySelector(".show-full-text");
-
-//     btn.addEventListener("click", (e) => {
-//       full.classList.toggle("active");
-//       btn.classList.toggle("active");
-//     });
-//   });
-// }
-
 // active tags
 if (document.querySelectorAll(".tags")) {
   const tags = document.querySelectorAll(".tags__tag");

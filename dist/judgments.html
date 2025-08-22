@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- шрифт для 75% -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wdth,wght@75,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- шрифт для 87% -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wdth,wght@87.5,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/libs/slim-select/slimselect.css" />
+    <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Template-vite.1.0.</title>
+  </head>
+  <body>
+    <header class="header">
+  <div class="header__top">
+    <div class="container">
+      <h1>יוסף אלרון, שופט בית המשפט העליון (בדימוס) - חיים בעולם המשפט</h1>
+    </div>
+  </div>
+  <div class="header__body">
+    <div class="container">
+      <div class="header__body-wrapper">
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html">דף בית</a>
+            </li>
+            <li>
+              <a href="legal-practice.html">עשייה משפטית</a>
+            </li>
+            <li>
+              <a href="background.html">רקע אישי</a>
+            </li>
+            <li>
+              <a href="landmarks.html">ציוני דרך</a>
+            </li>
+            <li>
+              <a href="judgments.html">פסקי דין</a>
+            </li>
+            <li>
+              <a href="articles.html">מאמרים</a>
+            </li>
+            <li>
+              <a href="lectures.html">הרצאות ונאומים</a>
+            </li>
+            <li>
+              <a href="#">כתבות</a>
+            </li>
+            <li>
+              <a href="contacts.html">יצירת קשר</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__search">
+          <button class="header__search-btn">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.622 11.622L15 15M13.4444 7.22222C13.4444 3.78578 10.6587 1 7.22222 1C3.78578 1 1 3.78578 1 7.22222C1 10.6587 3.78578 13.4444 7.22222 13.4444C10.6587 13.4444 13.4444 10.6587 13.4444 7.22222Z"
+                stroke="#032169"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
+          <input type="search" autocomplete="off" placeholder="חיפוש..." />
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <main class="legal-practice">
+      <div class="container">
+        <div class="legal-practice__wrapper">
+          <div class="legal-practice__body">
+            <div class="legal-practice__body-top">
+              <ul class="breadcrumbs">
+  <li><a href="#">עשייה משפטית</a></li>
+  <li>
+    <svg
+      width="10"
+      height="19"
+      viewBox="0 0 10 19"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7 7L3 10.5L7 14"
+        stroke="#032169"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </li>
+  <li><a href="#">דף הבית</a></li>
+</ul>
+
+            </div>
+            <div class="legal-practice__content">
+              <div class="legal-practice__tags">
+                <div class="tags">
+  <button class="tags__tag active">הצג הכל</button>
+  <button class="tags__tag">עברות המתה</button>
+  <button class="tags__tag">דיני עונשין</button>
+  <button class="tags__tag">סדר דין פלילי</button>
+  <button class="tags__tag">דיני ראיות</button>
+  <button class="tags__tag">הסגרה</button>
+  <button class="tags__tag">משפט ציבורי</button>
+  <button class="tags__tag">רווחה ואוכלוסיה חלשה</button>
+  <button class="tags__tag">משפט אזרחי</button>
+</div>
+
+              </div>
+              <div class="legal-practice__posts">
+                <div class="judgments-post" id="post-landmark-1">
+  <div class="judgments-post__title-box">
+    <h3 class="judgments-post__title-top">ינואר 2025</h3>
+    <h3 class="judgments-post__title-bottom">
+      רומן שגל נגד מדינת ישראל עפ"ג 31852-10-2
+    </h3>
+  </div>
+  <div class="judgments-post__content">
+    <div class="judgments-post__text judgments-post__text--excert">
+      <p>
+        <b
+          >ערעור על גזר דינו של בית המשפט המחוזי בחיפה ב-ת"פ 44729-04-24 מיום
+          1.10.2024 שניתן על ידי השופטת א' אימבר.</b
+        >
+      </p>
+      <p>
+        מתוך הפסיקה: “דין הערעור להידחות. ככלל, ערכאת הערעור לא תתערב בעונש
+        שגזרה הערכאה הדיונית, אלא במקרים שבהם ניכרת חריגה קיצונית ממדיניות
+        הענישה הנוהגת במקרים דומים, או כאשר נפלה על פני הדברים טעות מהותית
+        ובולטת בגזר הדין...”
+      </p>
+    </div>
+    <button class="judgments-post__btn">
+      <p>למסמך המלא / הורדה</p>
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9 14L5.59055 10.1644C5.25376 9.78548 5.25376 9.21452 5.59055 8.83564L9 5"
+          stroke="#0E7BCD"
+          stroke-width="1.5"
+          stroke-miterlimit="3.8637"
+          stroke-linecap="round"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+
+                <!-- br -->
+                <div class="judgments-post" id="post-landmark-2">
+  <div class="judgments-post__title-box">
+    <h3 class="judgments-post__title-top">ינואר 2025</h3>
+    <h3 class="judgments-post__title-bottom">
+      רומן שגל נגד מדינת ישראל עפ"ג 31852-10-2
+    </h3>
+  </div>
+  <div class="judgments-post__content">
+    <div class="judgments-post__text judgments-post__text--excert">
+      <p>
+        <b
+          >ערעור על גזר דינו של בית המשפט המחוזי בחיפה ב-ת"פ 44729-04-24 מיום
+          1.10.2024 שניתן על ידי השופטת א' אימבר.</b
+        >
+      </p>
+      <p>
+        מתוך הפסיקה: “דין הערעור להידחות. ככלל, ערכאת הערעור לא תתערב בעונש
+        שגזרה הערכאה הדיונית, אלא במקרים שבהם ניכרת חריגה קיצונית ממדיניות
+        הענישה הנוהגת במקרים דומים, או כאשר נפלה על פני הדברים טעות מהותית
+        ובולטת בגזר הדין...”
+      </p>
+    </div>
+    <button class="judgments-post__btn">
+      <p>למסמך המלא / הורדה</p>
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9 14L5.59055 10.1644C5.25376 9.78548 5.25376 9.21452 5.59055 8.83564L9 5"
+          stroke="#0E7BCD"
+          stroke-width="1.5"
+          stroke-miterlimit="3.8637"
+          stroke-linecap="round"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+
+                <!-- br -->
+                <div class="judgments-post" id="post-landmark-3">
+  <div class="judgments-post__title-box">
+    <h3 class="judgments-post__title-top">ינואר 2025</h3>
+    <h3 class="judgments-post__title-bottom">
+      רומן שגל נגד מדינת ישראל עפ"ג 31852-10-2
+    </h3>
+  </div>
+  <div class="judgments-post__content">
+    <div class="judgments-post__text judgments-post__text--excert">
+      <p>
+        <b
+          >ערעור על גזר דינו של בית המשפט המחוזי בחיפה ב-ת"פ 44729-04-24 מיום
+          1.10.2024 שניתן על ידי השופטת א' אימבר.</b
+        >
+      </p>
+      <p>
+        מתוך הפסיקה: “דין הערעור להידחות. ככלל, ערכאת הערעור לא תתערב בעונש
+        שגזרה הערכאה הדיונית, אלא במקרים שבהם ניכרת חריגה קיצונית ממדיניות
+        הענישה הנוהגת במקרים דומים, או כאשר נפלה על פני הדברים טעות מהותית
+        ובולטת בגזר הדין...”
+      </p>
+    </div>
+    <button class="judgments-post__btn">
+      <p>למסמך המלא / הורדה</p>
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9 14L5.59055 10.1644C5.25376 9.78548 5.25376 9.21452 5.59055 8.83564L9 5"
+          stroke="#0E7BCD"
+          stroke-width="1.5"
+          stroke-miterlimit="3.8637"
+          stroke-linecap="round"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+
+                <!-- br -->
+                <div class="judgments-post" id="post-landmark-4">
+  <div class="judgments-post__title-box">
+    <h3 class="judgments-post__title-top">ינואר 2025</h3>
+    <h3 class="judgments-post__title-bottom">
+      רומן שגל נגד מדינת ישראל עפ"ג 31852-10-2
+    </h3>
+  </div>
+  <div class="judgments-post__content">
+    <div class="judgments-post__text judgments-post__text--excert">
+      <p>
+        <b
+          >ערעור על גזר דינו של בית המשפט המחוזי בחיפה ב-ת"פ 44729-04-24 מיום
+          1.10.2024 שניתן על ידי השופטת א' אימבר.</b
+        >
+      </p>
+      <p>
+        מתוך הפסיקה: “דין הערעור להידחות. ככלל, ערכאת הערעור לא תתערב בעונש
+        שגזרה הערכאה הדיונית, אלא במקרים שבהם ניכרת חריגה קיצונית ממדיניות
+        הענישה הנוהגת במקרים דומים, או כאשר נפלה על פני הדברים טעות מהותית
+        ובולטת בגזר הדין...”
+      </p>
+    </div>
+    <button class="judgments-post__btn">
+      <p>למסמך המלא / הורדה</p>
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9 14L5.59055 10.1644C5.25376 9.78548 5.25376 9.21452 5.59055 8.83564L9 5"
+          stroke="#0E7BCD"
+          stroke-width="1.5"
+          stroke-miterlimit="3.8637"
+          stroke-linecap="round"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+
+              </div>
+            </div>
+          </div>
+          <div class="main-home__sidebar">
+            <div class="sidebar-judgments">
+  <p class="sidebar-judgments__title">פסקי דין נבחרים</p>
+  <ul class="sidebar-judgments__list">
+    <li class="sidebar-judgments__item-ghost">
+      <a href="#"><p>חקירת סיבת המוות</p> </a>
+    </li>
+    <li class="sidebar-judgments__item-ghost">
+      <a href="#"><p>יו"ר הוועדה הבוחנת</p> </a>
+    </li>
+    <li class="sidebar-judgments__item-fill">
+      <a href="#"><p>עברות המתה - מאמר</p> </a>
+    </li>
+    <li class="sidebar-judgments__item-fill">
+      <a href="#"><p>כנסי לשכת עורכי הדין</p> </a>
+    </li>
+    <li class="sidebar-judgments__item-fill">
+      <div class="sidebar-judgments__bonus-item">
+        <p class="sidebar-judgments__bonus-item-title">
+          שיח זכויות מול שיח ראיות
+        </p>
+        <p class="sidebar-judgments__bonus-item-subtitle">01.2025</p>
+      </div>
+      <a href="#"><p>שיח זכויות מול שיח ראיות</p> </a>
+    </li>
+    <li class="sidebar-judgments__item-fill">
+      <a href="#"><p>המשפט הפלילי</p></a>
+    </li>
+  </ul>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__wrapper">
+      <ul class="footer__right">
+        <li><a href="#"> תקנון האתר </a></li>
+        <li><a href="#">מדיניות פרטיות </a></li>
+      </ul>
+      <div class="footer__left">כל הזכויות שמורות | 2025</div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- <script src="assets/libs/slim-select/slimselect.min.js"></script>
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script> -->
+    <script src="assets/libs/gsap/gsap.min.js"></script>
+    <script src="assets/libs/gsap/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -763,6 +763,9 @@ html {
 .sidebar-legal-practice {
   position: fixed;
   width: 300px;
+  overflow: auto;
+  max-height: 605px;
+  overflow: auto;
 }
 .sidebar-legal-practice__title {
   font-weight: 400;
@@ -792,7 +795,7 @@ html {
   line-height: 100%;
   text-align: right;
   color: #000;
-  margin-bottom: 18px;
+  margin-bottom: 25px;
   position: relative;
   padding-right: 35px;
   cursor: pointer;
@@ -1015,66 +1018,6 @@ html {
   line-height: 130%;
   text-align: right;
   color: #fff;
-}
-
-.layout {
-  margin-top: 201px;
-}
-.layout__wrapper {
-  display: flex;
-  align-items: flex-start;
-  gap: 33px;
-}
-.layout__body {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 130%;
-  text-align: right;
-  color: #000;
-  font-stretch: 88%;
-}
-.layout__body ul {
-  list-style-position: outside;
-  margin-bottom: 30px;
-  padding-right: 6px;
-}
-.layout__body ul li {
-  padding-right: 12px;
-  position: relative;
-}
-.layout__body ul li::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: 4px;
-  height: 4px;
-  transform: translateY(-50%);
-  background-color: #000;
-}
-.layout__body p {
-  margin-bottom: 30px;
-}
-.layout__body p + ul {
-  margin-top: -30px;
-}
-.layout__content {
-  display: flex;
-  gap: 30px;
-  align-items: self-start;
-}
-.layout__title {
-  margin-top: -10px;
-  font-weight: 600;
-  font-size: 50px;
-  line-height: 120%;
-  text-align: right;
-  color: #032169;
-  margin-bottom: 30px;
-}
-.layout__sidebar {
-  width: 300px;
-  flex-shrink: 0;
 }
 
 .main-home {
