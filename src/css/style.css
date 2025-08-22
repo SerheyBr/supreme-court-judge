@@ -201,6 +201,33 @@ html {
   scroll-padding-top: 160px;
 }
 
+.title-section {
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 120%;
+  text-align: right;
+  color: #032169;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+}
+.tags__tag {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: right;
+  color: #0e7bcd;
+  background: #e6e6e6;
+  border-radius: 10px;
+  padding: 5px 7px;
+}
+.tags__tag.active {
+  color: #fff;
+  background: #bfbfc1;
+}
+
 .button {
   padding: 10px 10px;
   border-radius: 15px;
@@ -513,7 +540,6 @@ html {
   line-height: 100%;
   text-align: right;
   color: #032169;
-  margin-bottom: 30px;
 }
 .breadcrumbs li::after {
   display: none;
@@ -724,8 +750,8 @@ html {
 }
 
 .sidebar-featured-topics {
-  max-width: 300px;
-  width: 100%;
+  width: 300px;
+  position: fixed;
 }
 .sidebar-featured-topics__title {
   font-family: "Noto Sans Hebrew";
@@ -882,25 +908,6 @@ html {
   color: #8f8f8f;
 }
 
-.tags {
-  display: flex;
-  gap: 10px;
-}
-.tags__tag {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 100%;
-  text-align: right;
-  color: #0e7bcd;
-  background: #e6e6e6;
-  border-radius: 10px;
-  padding: 5px 7px;
-}
-.tags__tag.active {
-  color: #fff;
-  background: #bfbfc1;
-}
-
 .video-modal {
   position: fixed;
   width: 100%;
@@ -1025,67 +1032,22 @@ html {
   align-items: flex-start;
   gap: 33px;
 }
-.layout__body {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 130%;
-  text-align: right;
-  color: #000;
-  font-stretch: 88%;
-}
-.layout__body ul {
-  list-style-position: outside;
-  margin-bottom: 30px;
-  padding-right: 6px;
-}
-.layout__body ul li {
-  padding-right: 12px;
-  position: relative;
-}
-.layout__body ul li::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: 4px;
-  height: 4px;
-  transform: translateY(-50%);
-  background-color: #000;
-}
-.layout__body p {
-  margin-bottom: 30px;
-}
-.layout__body p + ul {
-  margin-top: -30px;
-}
-.layout__content {
-  display: flex;
-  gap: 30px;
-  align-items: self-start;
-}
-.layout__title {
-  margin-top: -10px;
-  font-weight: 600;
-  font-size: 50px;
-  line-height: 120%;
-  text-align: right;
-  color: #032169;
+.layout__breadcrumbs {
   margin-bottom: 30px;
 }
 .layout__sidebar {
   width: 300px;
+  min-height: 100vh;
   flex-shrink: 0;
+  position: relative;
 }
 
-.main-home {
-  margin-top: 201px;
-}
-.main-home__wrapper {
+.home {
   display: flex;
   align-items: flex-start;
-  gap: 33px;
+  gap: 30px;
 }
-.main-home__body {
+.home__body {
   font-weight: 400;
   font-size: 20px;
   line-height: 130%;
@@ -1093,16 +1055,16 @@ html {
   color: #000;
   font-stretch: 88%;
 }
-.main-home__body ul {
+.home__body ul {
   list-style-position: outside;
   margin-bottom: 30px;
   padding-right: 6px;
 }
-.main-home__body ul li {
+.home__body ul li {
   padding-right: 12px;
   position: relative;
 }
-.main-home__body ul li::after {
+.home__body ul li::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -1110,76 +1072,68 @@ html {
   width: 4px;
   height: 4px;
   transform: translateY(-50%);
+  border-radius: 50%;
   background-color: #000;
 }
-.main-home__body p {
+.home__body p {
   margin-bottom: 30px;
 }
-.main-home__body p + ul {
+.home__body p + ul {
   margin-top: -30px;
 }
-.main-home__content {
-  display: flex;
-  gap: 30px;
-  align-items: self-start;
-}
-.main-home__title {
+.home__title {
   margin-top: -10px;
-  font-weight: 600;
-  font-size: 50px;
-  line-height: 120%;
-  text-align: right;
-  color: #032169;
   margin-bottom: 30px;
 }
-.main-home__sidebar {
-  width: 300px;
-  flex-shrink: 0;
-}
-
-.legal-practice {
-  margin-top: 176px;
-}
-.legal-practice__wrapper {
+.background {
   display: flex;
+  align-items: flex-start;
+  gap: 30px;
 }
-.legal-practice__sidebar {
-  margin-top: 25px;
-  position: relative;
-  width: 300px;
-  flex-shrink: 0;
-}
-.legal-practice__body {
-  padding-left: 30px;
-}
-.legal-practice__result-serch {
+.background__body {
   font-weight: 400;
   font-size: 20px;
   line-height: 130%;
   text-align: right;
   color: #000;
-  margin-bottom: 20px;
+  font-stretch: 88%;
 }
-.legal-practice__result-serch span {
-  color: #0e7bcd;
+.background__body ul {
+  list-style-position: outside;
+  margin-bottom: 30px;
+  padding-right: 6px;
 }
-.legal-practice__tags {
+.background__body ul li {
+  padding-right: 12px;
+  position: relative;
+}
+.background__body ul li::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 4px;
+  height: 4px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: #000;
+}
+.background__body p {
   margin-bottom: 30px;
 }
-.legal-practice__title {
-  font-weight: 600;
-  font-size: 50px;
-  line-height: 120%;
-  text-align: right;
-  color: #032169;
-  margin-bottom: 20px;
+.background__body p + ul {
+  margin-top: -30px;
+}
+.background__title {
+  margin-top: -10px;
+  margin-bottom: 30px;
+}
+.book {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
 }
 .book__title {
-  font-weight: 600;
-  font-size: 50px;
-  line-height: 120%;
-  text-align: right;
-  color: #032169;
   margin-bottom: 20px;
 }
 .book__item h5 {
@@ -1196,6 +1150,7 @@ html {
   line-height: 130%;
   text-align: right;
   color: #000;
+  margin-bottom: 15px;
 }
 .book__item a {
   font-weight: 400;
@@ -1203,22 +1158,34 @@ html {
   line-height: 100%;
   color: #0e7bcd;
 }
-.book__btn {
+.contacts {
   display: flex;
-  align-items: center;
-  margin-right: auto;
-  gap: 2px;
+  align-items: flex-start;
+  gap: 30px;
+}
+.contacts__title {
+  margin-bottom: 20px;
+}
+.judgments__tags {
+  margin-bottom: 30px;
+}
+.lectures__tags {
+  margin-bottom: 30px;
+}
+.legal-practice__title {
+  margin-bottom: 20px;
+}
+.search__result-subtitle {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 100%;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: right;
+  color: #000;
+  margin-bottom: 20px;
+}
+.search__result-subtitle span {
   color: #0e7bcd;
 }
-.book__btn p {
-  margin-bottom: 0;
-}
-.book__btn svg {
-  transition: all 0.3s;
-}
-.book__btn.active svg {
-  transform: rotate(180deg);
+.search__tags {
+  margin-bottom: 40px;
 }

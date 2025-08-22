@@ -23,18 +23,18 @@
   </head>
   <body>
     @@include('../components/header.html')
-    <main class="legal-practice">
+    <main class="layout">
       <div class="container">
-        <div class="legal-practice__wrapper">
-          <div class="legal-practice__body">
-            <div class="legal-practice__body-top">
+        <div class="layout__wrapper">
+          <div class="layout__content">
+            <div class="layout__breadcrumbs">
               @@include('../components/breadcrumbs.html')
             </div>
-            <div class="legal-practice__content">
-              <div class="legal-practice__tags">
+            <div class="lectures">
+              <div class="lectures__tags">
                 @@include('../components/tags.html')
               </div>
-              <div class="legal-practice__posts">
+              <div class="lectures__posts">
                 @@include('../components/lectures-post.html', {"id": "1"})
                 <!-- br -->
                 @@include('../components/lectures-post.html', {"id": "2"})
@@ -45,7 +45,7 @@
               </div>
             </div>
           </div>
-          <div class="legal-practice__sidebar">
+          <div class="layout__sidebar">
             @@include('../components/sidebar-featured-topics.html')
           </div>
         </div>

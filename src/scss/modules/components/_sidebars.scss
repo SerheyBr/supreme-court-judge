@@ -2,8 +2,8 @@
 
 // sidebar featured-topics start
 .sidebar-featured-topics {
-  max-width: 300px;
-  width: 100%;
+  width: 300px;
+  position: fixed;
   &__title {
     font-family: $font-family;
     font-weight: 400;
@@ -46,8 +46,6 @@
 .sidebar-legal-practice {
   position: fixed;
   width: 300px;
-  // max-height: 605px;
-  // overflow: auto;
   &__title {
     font-weight: 400;
     font-size: 24px;

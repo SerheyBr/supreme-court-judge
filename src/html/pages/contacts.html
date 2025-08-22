@@ -23,31 +23,38 @@
   </head>
   <body>
     @@include('../components/header.html')
-    <main class="main-home">
+    <main class="layout">
       <div class="container">
-        <div class="main-home__wrapper">
-          <img
-            src="assets/images/contacts-img.png"
-            alt="img"
-            width="300"
-            height="375"
-            class="main-home__img"
-          />
-          <div class="main-home__body contacts">
-            <div class="contacts__title">
-              <p>מבקר.ת יקר.ה</p>
-              <p>
-                תודה על התעניינותך באתר ובתכניו. אם יש ברצונך להעביר פנייה
-                כלשהיא בנושא האתר, אנא רשום את פרטיך האישיים ואת מהות הפניה, אשר
-                יועברו אל מנהל האתר.
-              </p>
+        <div class="layout__wrapper">
+          <div class="layout__content">
+            <div class="layout__breadcrumbs">
+              @@include('../components/breadcrumbs.html')
             </div>
-            <div class="contacts__form">
-              @@include('../components/form.html')
+            <div class="contacts">
+              <img
+                src="assets/images/contacts-img.png"
+                alt="img"
+                width="300"
+                height="375"
+                class="main-home__img"
+              />
+              <div class="contacts__body">
+                <div class="contacts__title">
+                  <p>מבקר.ת יקר.ה</p>
+                  <p>
+                    תודה על התעניינותך באתר ובתכניו. אם יש ברצונך להעביר פנייה
+                    כלשהיא בנושא האתר, אנא רשום את פרטיך האישיים ואת מהות הפניה,
+                    אשר יועברו אל מנהל האתר.
+                  </p>
+                </div>
+                <div class="contacts__form">
+                  @@include('../components/form.html')
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="main-home__sidebar">
+          <div class="layout__sidebar">
             @@include('../components/sidebar-featured-topics.html')
           </div>
         </div>

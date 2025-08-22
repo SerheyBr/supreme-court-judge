@@ -27,3 +27,30 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 160px;
 }
+
+.title-section {
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 120%;
+  text-align: right;
+  color: $dark-blue;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+  &__tag {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: right;
+    color: $light-blue;
+    background: $light-grey;
+    border-radius: 10px;
+    padding: 5px 7px;
+  }
+  &__tag.active {
+    color: #fff;
+    background: $dark-grey;
+  }
+}

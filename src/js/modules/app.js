@@ -1,19 +1,24 @@
 // function show / don't show fulltext
 function toggleShowFullTextForPost(classNamePosts) {
-  if (document.querySelectorAll(classNamePosts)) {
-    const posts = document.querySelectorAll(classNamePosts);
+  const posts = document.querySelectorAll(classNamePosts);
 
-    posts.forEach((post) => {
-      const btn = post.querySelector(".button-show-more");
-      const fullText = post.querySelector(".show-full-text");
+  if (posts.length === 0) {
+    return;
+  }
 
+  posts.forEach((post) => {
+    const btn = post.querySelector(".button-show-more");
+    const fullText = post.querySelector(".show-full-text");
+
+    if (btn && fullText) {
       btn.addEventListener("click", (e) => {
         fullText.classList.toggle("active");
         btn.classList.toggle("active");
       });
-    });
-  }
+    }
+  });
 }
+
 toggleShowFullTextForPost(".legal-practice-post");
 toggleShowFullTextForPost(".landmarks-post");
 toggleShowFullTextForPost(".articles-post");
