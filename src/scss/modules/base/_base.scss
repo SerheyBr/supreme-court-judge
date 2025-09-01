@@ -32,7 +32,7 @@ html {
   font-weight: 600;
   font-size: 50px;
   line-height: 120%;
-  text-align: right;
+  text-align: justify;
   color: $dark-blue;
 }
 
@@ -43,7 +43,7 @@ html {
     font-weight: 400;
     font-size: 16px;
     line-height: 100%;
-    text-align: right;
+    text-align: justify;
     color: $light-blue;
     background: $light-grey;
     border-radius: 10px;
@@ -53,4 +53,43 @@ html {
     color: #fff;
     background: $dark-grey;
   }
+}
+
+.text-WYSIWYG {
+  ul {
+    list-style-position: outside;
+    margin-bottom: 30px;
+  }
+  ul li {
+    padding-right: 12px;
+    position: relative;
+  }
+  ul li p {
+    margin-bottom: 0;
+  }
+  ul li::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 4px;
+    height: 4px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: #000;
+  }
+}
+
+.text-WYSIWYG p + ul {
+  margin-top: -20px;
+}
+
+blockquote {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: justify;
+  color: #000;
+  padding: 0 80px;
 }

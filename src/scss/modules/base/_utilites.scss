@@ -21,6 +21,13 @@
   }
 }
 
+.button-show-more.active .btn-hidden {
+  display: none;
+}
+.button-show-more.active .btn-visible {
+  display: block;
+}
+
 .show-full-text {
   max-height: 0;
   overflow: hidden;

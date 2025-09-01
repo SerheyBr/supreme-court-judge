@@ -12,8 +12,13 @@ function toggleShowFullTextForPost(classNamePosts) {
 
     if (btn && fullText) {
       btn.addEventListener("click", (e) => {
-        fullText.classList.toggle("active");
+        // fullText.classList.toggle("active");
+        const isActive = fullText.classList.toggle("active");
         btn.classList.toggle("active");
+        // Если текст скрывается, скроллим к началу блока
+        if (!isActive) {
+          post.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
       });
     }
   });
