@@ -228,6 +228,7 @@ html {
 
 .tags {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 .tags__tag {
@@ -283,6 +284,17 @@ blockquote {
   text-align: justify;
   color: #000;
   padding: 0 80px;
+}
+
+.loading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.loading img {
+  width: 20px;
+  height: 20px;
 }
 
 .button {
@@ -710,6 +722,7 @@ blockquote {
 .judgments-post__btn {
   display: flex;
   align-items: center;
+  justify-content: end;
   margin-right: auto;
   gap: 2px;
   font-weight: 400;
