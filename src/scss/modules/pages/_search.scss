@@ -1,0 +1,22 @@
+@use "../base/variables" as *;
+
+.search {
+  &__result-subtitle {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    text-align: justify;
+    color: #000;
+    margin-bottom: 20px;
+    span {
+      color: $light-blue;
+    }
+  }
+
+  &__tags {
+    margin-bottom: 40px;
+  }
+
+  &__posts {
+  }
+}

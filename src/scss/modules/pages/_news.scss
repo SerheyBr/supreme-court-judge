@@ -1,0 +1,59 @@
+@use "../base/variables" as *;
+.news {
+  &__posts {
+  }
+}
+
+.news-post {
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+  display: flex;
+  &__img {
+    border-radius: 10px;
+    width: 300px;
+    height: 165px;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin-left: 30px;
+  }
+
+  &__content {
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+    text-align: justify;
+    color: #000;
+    margin-bottom: 5px;
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    text-align: justify;
+    color: $dark-blue;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    text-align: justify;
+    color: #000;
+    margin-bottom: 20px;
+    p {
+      margin-bottom: 10px;
+    }
+    a {
+      background-color: red;
+    }
+  }
+
+  &__btn {
+  }
+}

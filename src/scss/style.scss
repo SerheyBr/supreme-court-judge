@@ -2,21 +2,27 @@
 @use "modules/base/reset";
 @use "modules/base/variables";
 @use "modules/base/utilites";
+
 // глобальные
 @use "modules/base/base";
 
 // компоненты
-
-@use "modules/components/buttons";
-@use "modules/components/custom-swiper";
 @use "modules/components/footer";
 @use "modules/components/header";
-@use "modules/components/forms";
-@use "modules/components/input-select";
 @use "modules/components/breadcrumbs";
-@use "modules/components/posts";
 @use "modules/components/sidebars";
-@use "modules/components/video-modal";
 @use "modules/components/layout";
+
 // страницы
-@use "modules/components/pages";
+@use "modules/pages/articles";
+@use "modules/pages/background";
+@use "modules/pages/book";
+@use "modules/pages/contacts";
+@use "modules/pages/home";
+@use "modules/pages/judgments";
+@use "modules/pages/landmarks";
+@use "modules/pages/lectures";
+@use "modules/pages/legal-practice";
+@use "modules/pages/news";
+@use "modules/pages/search";
+@use "modules/pages/select-page-article";

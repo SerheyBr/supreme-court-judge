@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* Reset and base styles  */
 * {
   padding: 0px;
@@ -297,131 +296,6 @@ blockquote {
   height: 20px;
 }
 
-.button {
-  padding: 10px 10px;
-  border-radius: 15px;
-  background-color: grey;
-  transition: all 0.3s;
-  user-select: none;
-  display: inline-block;
-  width: auto;
-  font-size: 1.125rem;
-}
-.button:hover {
-  opacity: 0.7;
-}
-.button--primary {
-  color: #fff;
-}
-.button--secondary {
-  color: #fff;
-}
-.button--outline {
-  background-color: inherit;
-}
-.button--ghost {
-  background-color: inherit;
-}
-.swiper {
-  width: 100%; /* Занимает всю ширину родителя */
-  height: 200px; /* Фиксированная высота (можно auto, если контент определяет высоту) */
-  margin: 0 auto; /* Центрирование, если нужно */
-  position: relative; /* Нужно для позиционирования стрелок и пагинации */
-}
-
-/* Обертка для слайдов (не трогаем ширину/высоту, Swiper сам управляет) */
-.swiper-wrapper {
-  display: flex; /* Слайды в ряд */
-  width: 100%;
-  height: 100%;
-}
-
-/* Стили для каждого слайда */
-.swiper-slide {
-  width: 300px; /* Фиксированная ширина слайда */
-  height: 100%; /* Занимает всю высоту контейнера .swiper */
-  flex-shrink: 0; /* Не сжимается при недостатке места */
-  /* Дополнительные стили для контента внутри слайда */
-  background-color: aqua;
-}
-
-/* Контейнер для стрелок (генерируется Swiper) */
-/* Стрелка "назад" */
-/* Стрелка "вперед" */
-/* Иконки внутри стрелок (опционально) */
-/* Контейнер пагинации (точки) */
-/* Отдельная точка */
-.swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background: #ddd;
-  border-radius: 50%;
-  opacity: 1;
-  cursor: pointer;
-}
-
-/* Активная точка */
-.swiper-pagination-bullet-active {
-  background: #333;
-}
-
-.my-slider__wrapper {
-  position: relative;
-}
-.my-slider__pagination {
-  margin-top: 40px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 8px; /* Расстояние между точками */
-}
-.my-slider__button-next, .my-slider__button-prev {
-  width: 40px; /* Ширина стрелки */
-  height: 40px; /* Высота стрелки */
-  background-color: #00ff00;
-  border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  position: absolute; /* Выносим из потока */
-  top: 50%; /* Выравниваем по вертикали */
-  transform: translateY(-100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  z-index: 10; /* Чтобы стрелки были над слайдами */
-}
-.my-slider__button-next {
-  right: -80px;
-}
-.my-slider__button-prev {
-  left: -80px;
-}
-
-.my-slider-slide {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  color: rgba(0, 0, 0, 0.566);
-  text-align: center;
-}
-.my-slider-slide__title {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-.my-slider-slide__subtitle {
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-.my-slider-slide__img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-
 .footer {
   margin-top: 100px;
   font-weight: 400;
@@ -521,89 +395,6 @@ blockquote {
   cursor: pointer;
 }
 
-.my-form {
-  max-width: 480px;
-}
-
-.my-form .wpcf7-form-control {
-  border: 1px solid #000;
-  border-radius: 5px;
-}
-
-.my-form .wpcf7-text {
-  padding: 13px 15px;
-  border-radius: 5px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 130%;
-  color: rgba(105, 104, 111, 0.5);
-  width: 100%;
-}
-
-.my-form .wpcf7-textarea {
-  padding: 21px 15px;
-  resize: none;
-  max-height: 134px;
-  outline: none;
-  width: 100%;
-}
-
-.my-form .wpcf7-radio {
-  background-color: rgb(0, 47, 255);
-}
-
-.my-form .wpcf7-submit {
-  padding: 10px 30px;
-  background: #d1cdce;
-}
-
-.ss-main {
-  width: 100%;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  background: #f8fafc;
-  min-height: 46px;
-  transition: all 0.2s ease;
-}
-.ss-main:focus-within {
-  border-color: #6366f1;
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
-  background: #fff;
-}
-.ss-main .ss-single-selected {
-  padding: 0.75rem 1rem;
-  color: #1e293b;
-  font-size: 0.9375rem;
-}
-.ss-main .ss-arrow path {
-  stroke: #64748b;
-}
-
-.ss-content {
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  margin-top: 0.5rem;
-  background: #fff;
-}
-.ss-content .ss-list .ss-option {
-  padding: 0.75rem 1rem;
-  font-size: 0.9375rem;
-  color: #1e293b;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-.ss-content .ss-list .ss-option:hover {
-  background: #f1f5f9;
-  color: #6366f1;
-}
-.ss-content .ss-list .ss-option.ss-selected {
-  background: #eef2ff;
-  color: #6366f1;
-  font-weight: 500;
-}
-
 .breadcrumbs {
   display: flex;
   align-items: center;
@@ -616,215 +407,6 @@ blockquote {
 }
 .breadcrumbs li::after {
   display: none;
-}
-
-.legal-practice-post {
-  padding-bottom: 15px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  margin-bottom: 15px;
-}
-.legal-practice-post__title {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 120%;
-  text-align: justify;
-  color: #032169;
-  margin-bottom: 20px;
-  font-stretch: 80%;
-}
-.legal-practice-post__text {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 130%;
-  text-align: justify;
-  color: #000;
-  margin-bottom: 20px;
-}
-.legal-practice-post__text p {
-  margin-bottom: 20px;
-}
-.landmarks-post {
-  padding-bottom: 15px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  margin-bottom: 15px;
-  display: flex;
-}
-.landmarks-post__title-box {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 120%;
-  text-align: justify;
-  color: #032169;
-  margin-bottom: 20px;
-  width: 300px;
-  flex-shrink: 0;
-  margin-left: 30px;
-}
-.landmarks-post__title-top {
-  font-weight: 600;
-  font-size: 50px;
-  line-height: 100%;
-  font-stretch: 80%;
-}
-.landmarks-post__title-bottom {
-  font-size: 24px;
-  font-stretch: 80%;
-}
-.landmarks-post__text {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 130%;
-  text-align: justify;
-  color: #000;
-  margin-bottom: 20px;
-}
-.landmarks-post__text p {
-  margin-bottom: 20px;
-}
-.judgments-post {
-  padding-bottom: 15px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  margin-bottom: 15px;
-  display: flex;
-}
-.judgments-post__title-box {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 120%;
-  text-align: justify;
-  color: #032169;
-  margin-bottom: 20px;
-  width: 300px;
-  flex-shrink: 0;
-  margin-left: 30px;
-  font-stretch: 80%;
-}
-.judgments-post__title-date {
-  font-weight: 600;
-  font-size: 50px;
-  line-height: 100%;
-  margin-bottom: 10px;
-}
-.judgments-post__title-bottom {
-  font-size: 24px;
-}
-.judgments-post__text {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 130%;
-  text-align: justify;
-  color: #000;
-  margin-bottom: 20px;
-}
-.judgments-post__text p {
-  margin-bottom: 10px;
-}
-.judgments-post__btn {
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  margin-right: auto;
-  gap: 2px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 100%;
-  color: #0e7bcd;
-}
-
-.articles-post {
-  padding-bottom: 15px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  margin-bottom: 15px;
-  display: flex;
-}
-.articles-post__img {
-  border-radius: 10px;
-  width: 300px;
-  height: 165px;
-  object-fit: cover;
-  flex-shrink: 0;
-  margin-left: 30px;
-}
-.articles-post__title {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 130%;
-  text-align: justify;
-  color: #000;
-  margin-bottom: 5px;
-}
-.articles-post__subtitle {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 130%;
-  text-align: justify;
-  color: #032169;
-  margin-bottom: 10px;
-}
-.articles-post__text {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 130%;
-  text-align: justify;
-  color: #000;
-  margin-bottom: 20px;
-}
-.articles-post__text p {
-  margin-bottom: 10px;
-}
-.articles-post__text a {
-  background-color: red;
-}
-.lectures-post {
-  padding-bottom: 15px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  margin-bottom: 15px;
-  display: flex;
-}
-.lectures-post__img {
-  border-radius: 10px;
-  width: 300px;
-  height: 165px;
-  object-fit: cover;
-  flex-shrink: 0;
-  margin-left: 30px;
-}
-.lectures-post__title {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 130%;
-  text-align: justify;
-  color: #000;
-  margin-bottom: 5px;
-}
-.lectures-post__subtitle {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 130%;
-  text-align: justify;
-  color: #032169;
-  margin-bottom: 10px;
-}
-.lectures-post__text {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 130%;
-  text-align: justify;
-  color: #000;
-  margin-bottom: 20px;
-}
-.lectures-post__text p {
-  margin-bottom: 10px;
-}
-.lectures-post__btn {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-right: auto;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 100%;
-  color: #0e7bcd;
 }
 
 .sidebar-featured-topics {
@@ -957,6 +539,382 @@ blockquote {
   color: rgba(0, 0, 0, 0.5568627451);
 }
 
+.layout {
+  margin-top: 200px;
+}
+.layout__wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 33px;
+}
+.layout__content {
+  width: 100%;
+}
+.layout__breadcrumbs {
+  margin-bottom: 30px;
+}
+.layout__sidebar {
+  width: 300px;
+  min-height: 100vh;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.articles-post {
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+  display: flex;
+}
+.articles-post__img {
+  border-radius: 10px;
+  width: 300px;
+  height: 165px;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin-left: 30px;
+}
+.articles-post__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 130%;
+  text-align: justify;
+  color: #000;
+  margin-bottom: 5px;
+}
+.articles-post__subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  text-align: justify;
+  color: #032169;
+  margin-bottom: 10px;
+}
+.articles-post__text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: justify;
+  color: #000;
+  margin-bottom: 20px;
+}
+.articles-post__text p {
+  margin-bottom: 10px;
+}
+.articles-post__text a {
+  background-color: red;
+}
+.background {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+.background__body {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: justify;
+  color: #000;
+  font-stretch: 88%;
+}
+.background__body ul {
+  list-style-position: outside;
+  margin-bottom: 30px;
+  padding-right: 6px;
+}
+.background__body ul li {
+  padding-right: 12px;
+  position: relative;
+}
+.background__body ul li::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 4px;
+  height: 4px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: #000;
+}
+.background__body p {
+  margin-bottom: 30px;
+}
+.background__body p + ul {
+  margin-top: -30px;
+}
+.background__title {
+  margin-top: -10px;
+  margin-bottom: 30px;
+}
+.book {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+.book__title {
+  margin-bottom: 20px;
+}
+.book__item h5 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: justify;
+  color: #032169;
+  margin-bottom: 15px;
+}
+.book__item p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: justify;
+  color: #000;
+  margin-bottom: 15px;
+}
+.book__item a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #0e7bcd;
+}
+.book__btn p {
+  color: #0e7bcd;
+  margin-bottom: 0;
+}
+
+.contacts {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+.contacts__title {
+  margin-bottom: 20px;
+}
+.my-form {
+  max-width: 480px;
+}
+
+.my-form .wpcf7-form-control {
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.my-form .wpcf7-text {
+  padding: 13px 15px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: rgba(105, 104, 111, 0.5);
+  width: 100%;
+}
+
+.my-form .wpcf7-textarea {
+  padding: 21px 15px;
+  resize: none;
+  max-height: 134px;
+  outline: none;
+  width: 100%;
+}
+
+.my-form .wpcf7-radio {
+  background-color: rgb(0, 47, 255);
+}
+
+.my-form .wpcf7-submit {
+  padding: 10px 30px;
+  background: #d1cdce;
+}
+
+.home {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+.home__body {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: justify;
+  color: #000;
+  font-stretch: 88%;
+}
+.home__body ul {
+  list-style-position: outside;
+  margin-bottom: 30px;
+  padding-right: 6px;
+}
+.home__body ul li {
+  padding-right: 12px;
+  position: relative;
+}
+.home__body ul li::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 4px;
+  height: 4px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: #000;
+}
+.home__body p {
+  margin-bottom: 30px;
+}
+.home__body p + ul {
+  margin-top: -30px;
+}
+.home__title {
+  margin-top: -10px;
+  margin-bottom: 30px;
+}
+.judgments__tags {
+  margin-bottom: 30px;
+}
+.judgments-post {
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+  display: flex;
+}
+.judgments-post__title-box {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: justify;
+  color: #032169;
+  margin-bottom: 20px;
+  width: 300px;
+  flex-shrink: 0;
+  margin-left: 30px;
+  font-stretch: 80%;
+}
+.judgments-post__title-date {
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 100%;
+  margin-bottom: 10px;
+}
+.judgments-post__title-bottom {
+  font-size: 24px;
+}
+.judgments-post__text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: justify;
+  color: #000;
+  margin-bottom: 20px;
+}
+.judgments-post__text p {
+  margin-bottom: 10px;
+}
+.judgments-post__btn {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-right: auto;
+  gap: 2px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #0e7bcd;
+}
+
+.landmarks-post {
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+  display: flex;
+}
+.landmarks-post__title-box {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: justify;
+  color: #032169;
+  margin-bottom: 20px;
+  width: 300px;
+  flex-shrink: 0;
+  margin-left: 30px;
+}
+.landmarks-post__title-top {
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 100%;
+  font-stretch: 80%;
+}
+.landmarks-post__title-bottom {
+  font-size: 24px;
+  font-stretch: 80%;
+}
+.landmarks-post__text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: justify;
+  color: #000;
+  margin-bottom: 20px;
+}
+.landmarks-post__text p {
+  margin-bottom: 20px;
+}
+.lectures__tags {
+  margin-bottom: 30px;
+}
+.lectures-post {
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+  display: flex;
+}
+.lectures-post__img {
+  border-radius: 10px;
+  width: 300px;
+  height: 165px;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin-left: 30px;
+}
+.lectures-post__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 130%;
+  text-align: justify;
+  color: #000;
+  margin-bottom: 5px;
+}
+.lectures-post__subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  text-align: justify;
+  color: #032169;
+  margin-bottom: 10px;
+}
+.lectures-post__text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: justify;
+  color: #000;
+  margin-bottom: 20px;
+}
+.lectures-post__text p {
+  margin-bottom: 10px;
+}
+.lectures-post__btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: auto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #0e7bcd;
+}
+
 .video-modal {
   position: fixed;
   width: 100%;
@@ -1073,164 +1031,77 @@ blockquote {
   color: #fff;
 }
 
-.layout {
-  margin-top: 200px;
-}
-.layout__wrapper {
-  display: flex;
-  align-items: flex-start;
-  gap: 33px;
-}
-.layout__content {
-  width: 100%;
-}
-.layout__breadcrumbs {
-  margin-bottom: 30px;
-}
-.layout__sidebar {
-  width: 300px;
-  min-height: 100vh;
-  flex-shrink: 0;
-  position: relative;
-}
-
-.home {
-  display: flex;
-  align-items: flex-start;
-  gap: 30px;
-}
-.home__body {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 130%;
-  text-align: justify;
-  color: #000;
-  font-stretch: 88%;
-}
-.home__body ul {
-  list-style-position: outside;
-  margin-bottom: 30px;
-  padding-right: 6px;
-}
-.home__body ul li {
-  padding-right: 12px;
-  position: relative;
-}
-.home__body ul li::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: 4px;
-  height: 4px;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  background-color: #000;
-}
-.home__body p {
-  margin-bottom: 30px;
-}
-.home__body p + ul {
-  margin-top: -30px;
-}
-.home__title {
-  margin-top: -10px;
-  margin-bottom: 30px;
-}
-.background {
-  display: flex;
-  align-items: flex-start;
-  gap: 30px;
-}
-.background__body {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 130%;
-  text-align: justify;
-  color: #000;
-  font-stretch: 88%;
-}
-.background__body ul {
-  list-style-position: outside;
-  margin-bottom: 30px;
-  padding-right: 6px;
-}
-.background__body ul li {
-  padding-right: 12px;
-  position: relative;
-}
-.background__body ul li::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: 4px;
-  height: 4px;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  background-color: #000;
-}
-.background__body p {
-  margin-bottom: 30px;
-}
-.background__body p + ul {
-  margin-top: -30px;
-}
-.background__title {
-  margin-top: -10px;
-  margin-bottom: 30px;
-}
-.book {
-  display: flex;
-  align-items: flex-start;
-  gap: 30px;
-}
-.book__title {
+.legal-practice__title {
   margin-bottom: 20px;
 }
-.book__item h5 {
+.legal-practice-post {
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+}
+.legal-practice-post__title {
   font-weight: 600;
   font-size: 24px;
   line-height: 120%;
   text-align: justify;
   color: #032169;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  font-stretch: 80%;
 }
-.book__item p {
+.legal-practice-post__text {
   font-weight: 400;
   font-size: 20px;
   line-height: 130%;
   text-align: justify;
   color: #000;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
-.book__item a {
+.legal-practice-post__text p {
+  margin-bottom: 20px;
+}
+.news-post {
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+  display: flex;
+}
+.news-post__img {
+  border-radius: 10px;
+  width: 300px;
+  height: 165px;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin-left: 30px;
+}
+.news-post__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 130%;
+  text-align: justify;
+  color: #000;
+  margin-bottom: 5px;
+}
+.news-post__subtitle {
   font-weight: 400;
   font-size: 16px;
-  line-height: 100%;
-  color: #0e7bcd;
+  line-height: 130%;
+  text-align: justify;
+  color: #032169;
+  margin-bottom: 10px;
 }
-.book__btn p {
-  color: #0e7bcd;
-  margin-bottom: 0;
-}
-
-.contacts {
-  display: flex;
-  align-items: flex-start;
-  gap: 30px;
-}
-.contacts__title {
+.news-post__text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: justify;
+  color: #000;
   margin-bottom: 20px;
 }
-.judgments__tags {
-  margin-bottom: 30px;
+.news-post__text p {
+  margin-bottom: 10px;
 }
-.lectures__tags {
-  margin-bottom: 30px;
-}
-.legal-practice__title {
-  margin-bottom: 20px;
+.news-post__text a {
+  background-color: red;
 }
 .search__result-subtitle {
   font-weight: 400;

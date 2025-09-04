@@ -1,6 +1,19 @@
 @use "../base/variables" as *;
+.contacts {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  &__body {
+  }
 
-// Основные стили формы
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__form {
+  }
+}
+
 .my-form {
   max-width: 480px;
 }

@@ -1,0 +1,48 @@
+@use "../base/variables" as *;
+
+.landmarks {
+  &__posts {
+  }
+}
+
+.landmarks-post {
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+  display: flex;
+  &__title-box {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: justify;
+    color: $dark-blue;
+    margin-bottom: 20px;
+    width: 300px;
+    flex-shrink: 0;
+    margin-left: 30px;
+  }
+  &__title-top {
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 100%;
+    font-stretch: 80%;
+  }
+  &__title-bottom {
+    font-size: 24px;
+    font-stretch: 80%;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    text-align: justify;
+    color: #000;
+    margin-bottom: 20px;
+    p {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__btn {
+  }
+}
