@@ -129,10 +129,11 @@
     margin-left: 30px;
     font-stretch: 80%;
   }
-  &__title-top {
+  &__title-date {
     font-weight: 600;
     font-size: 50px;
     line-height: 100%;
+    margin-bottom: 10px;
   }
   &__title-bottom {
     font-size: 24px;
@@ -231,6 +232,9 @@
     margin-bottom: 20px;
     p {
       margin-bottom: 10px;
+    }
+    a {
+      background-color: red;
     }
   }
 

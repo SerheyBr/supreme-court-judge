@@ -119,6 +119,20 @@ if (document.querySelector(".video-modal")) {
   });
 }
 
+//action tags for judgments page
+// function setupTagButtons() {
+//   const tagButtons = document.querySelectorAll(".tags__tag");
+
+//   tagButtons.forEach((button) => {
+//     button.addEventListener("click", function () {
+//       tagButtons.forEach((btn) => btn.classList.remove("active"));
+//       this.classList.add("active");
+//     });
+//   });
+// }
+
+// document.addEventListener("DOMContentLoaded", setupTagButtons);
+
 document.addEventListener("DOMContentLoaded", function () {
   // Инициализация GSAP ScrollTrigger
   gsap.registerPlugin(ScrollTrigger);

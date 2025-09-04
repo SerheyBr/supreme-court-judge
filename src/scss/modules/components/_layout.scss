@@ -1,13 +1,14 @@
 @use "../base/variables" as *;
 
 .layout {
-  margin-top: calc(156px + 45px);
+  margin-top: 200px;
   &__wrapper {
     display: flex;
     align-items: flex-start;
     gap: 33px;
   }
   &__content {
+    width: 100%;
   }
   &__breadcrumbs {
     margin-bottom: 30px;

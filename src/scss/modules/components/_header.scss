@@ -38,8 +38,12 @@
       transition: all 0.3s;
       cursor: pointer;
     }
-    nav ul li a:hover {
+    nav ul li:hover {
+      background: #e6e6e696;
+    }
+    & .current-menu-item {
       background: $light-grey;
+      border-bottom: 5px solid #042269;
     }
   }
   &__body-wrapper {

@@ -21,26 +21,31 @@
     color: #000;
     // font-stretch: 88%;
   }
+
   ul li a {
     display: block;
     background: $light-grey;
     border-radius: 10px;
     padding: 15px 30px;
     position: relative;
+    transition: all 0.3s;
   }
-  &__book {
-    a {
-      height: 166px;
-    }
-    img {
-      position: absolute;
-      bottom: -46px;
-      left: 12px;
-      //   width: 100%;
-      //   height: 100%;
-      object-fit: cover;
-    }
+  ul li a:hover {
+    background-color: #e6e6e683;
   }
+  // &__book {
+  //   a {
+  //     height: 166px;
+  //   }
+  //   img {
+  //     position: absolute;
+  //     bottom: -46px;
+  //     left: 12px;
+  //     //   width: 100%;
+  //     //   height: 100%;
+  //     object-fit: cover;
+  //   }
+  // }
 }
 // sidebar legal-practice start
 .sidebar-legal-practice {
@@ -118,6 +123,8 @@
 // sidebar judgments start
 .sidebar-judgments {
   margin-top: 20px;
+  position: fixed;
+  width: 300px;
   &__title {
     font-weight: 400;
     font-size: 24px;
@@ -129,51 +136,20 @@
   &__list {
     font-weight: 400;
     font-size: 20px;
-    line-height: 100%;
+    line-height: 130%;
     text-align: justify;
     color: #000;
     li {
       position: relative;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      padding: 10px 0;
     }
-  }
-
-  &__item-ghost {
-    padding: 15px 0px;
-    background: inherit;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 0;
-    margin-bottom: 10px;
-  }
-
-  &__item-fill {
-    padding: 15px 30px;
-    background: $light-grey;
-    margin-bottom: 15px;
-    border-radius: 10px;
-  }
-
-  &__bonus-item {
-    position: absolute;
-    left: -11px;
-    top: 50%;
-    transform: translate(-100%, -50%);
-  }
-
-  &__bonus-item-title {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 100%;
-    text-align: justify;
-    color: #000;
-    margin-bottom: 4px;
-  }
-
-  &__bonus-item-subtitle {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 100%;
-    text-align: justify;
-    color: #8f8f8f;
+    li a {
+      transition: all 0.3s;
+    }
+    li:hover a {
+      color: #0000008e;
+    }
   }
 }
 // sidebar judgments end

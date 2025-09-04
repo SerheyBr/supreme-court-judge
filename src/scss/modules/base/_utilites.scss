@@ -6,6 +6,7 @@
 
 .button-show-more {
   display: flex;
+  justify-content: end;
   align-items: center;
   margin-right: auto;
   gap: 2px;
@@ -13,12 +14,19 @@
   font-size: 16px;
   line-height: 100%;
   color: $light-blue;
+
   svg {
     transition: all 0.3s;
   }
   &.active svg {
     transform: rotate(180deg);
   }
+}
+.button-show-more .btn-hidden {
+  display: block;
+}
+.button-show-more .btn-visible {
+  display: none;
 }
 
 .button-show-more.active .btn-hidden {

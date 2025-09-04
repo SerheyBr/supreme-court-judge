@@ -12,8 +12,13 @@ function toggleShowFullTextForPost(classNamePosts) {
 
     if (btn && fullText) {
       btn.addEventListener("click", (e) => {
-        fullText.classList.toggle("active");
+        // fullText.classList.toggle("active");
+        const isActive = fullText.classList.toggle("active");
         btn.classList.toggle("active");
+        // Если текст скрывается, скроллим к началу блока
+        if (!isActive) {
+          post.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
       });
     }
   });
@@ -113,6 +118,20 @@ if (document.querySelector(".video-modal")) {
     }
   });
 }
+
+//action tags for judgments page
+// function setupTagButtons() {
+//   const tagButtons = document.querySelectorAll(".tags__tag");
+
+//   tagButtons.forEach((button) => {
+//     button.addEventListener("click", function () {
+//       tagButtons.forEach((btn) => btn.classList.remove("active"));
+//       this.classList.add("active");
+//     });
+//   });
+// }
+
+// document.addEventListener("DOMContentLoaded", setupTagButtons);
 
 document.addEventListener("DOMContentLoaded", function () {
   // Инициализация GSAP ScrollTrigger
