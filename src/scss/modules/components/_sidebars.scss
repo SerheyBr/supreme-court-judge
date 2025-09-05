@@ -182,7 +182,7 @@
   .sidebar-legal-practice {
     width: auto;
     left: 0;
-    top: 155px;
+    top: 103px;
     background-color: $light-grey;
     padding: 21px 19px 0px 32px;
     transform: translateX(-100%);
@@ -202,11 +202,7 @@
     }
   }
 }
-@media (max-width: $breakpoint-md) {
-  .sidebar-legal-practice {
-    top: 103px;
-  }
-}
+
 @media (min-width: $breakpoint-md) {
   .sidebar-legal-practice {
     &__list {

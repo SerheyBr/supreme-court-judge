@@ -485,10 +485,11 @@ blockquote {
 
 @media (max-width: 1200px) {
   .header__menu ul li a {
+    font-size: 18px;
     padding: 33px 10px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1050px) {
   .header .header {
     font-stretch: 75%;
   }
@@ -527,6 +528,7 @@ blockquote {
   }
   .header .header__menu ul li a {
     padding: 15px 0;
+    font-size: 20px;
   }
   .header .header__burger {
     display: block;
@@ -694,7 +696,7 @@ blockquote {
   .sidebar-legal-practice {
     width: auto;
     left: 0;
-    top: 155px;
+    top: 103px;
     background-color: #e6e6e6;
     padding: 21px 19px 0px 32px;
     transform: translateX(-100%);
@@ -710,11 +712,6 @@ blockquote {
   }
   .sidebar-legal-practice__list li {
     font-size: 18px;
-  }
-}
-@media (max-width: 768px) {
-  .sidebar-legal-practice {
-    top: 103px;
   }
 }
 @media (min-width: 768px) {
@@ -800,10 +797,12 @@ blockquote {
   position: relative;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1050px) {
   .layout {
-    margin-top: 180px;
+    margin-top: 130px;
   }
+}
+@media (max-width: 992px) {
   .layout__wrapper {
     gap: 15px;
     flex-direction: column;
@@ -811,11 +810,6 @@ blockquote {
   .layout__sidebar {
     min-height: auto;
     margin-bottom: 30px;
-  }
-}
-@media (max-width: 768px) {
-  .layout {
-    margin-top: 130px;
   }
 }
 .articles-post {
@@ -1549,6 +1543,26 @@ blockquote {
 }
 .search__tags {
   margin-bottom: 40px;
+}
+.search-result {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+.search-result span {
+  color: #0e7bcd;
+}
+.search-result__location {
+  margin-bottom: 10px;
+}
+.search-result__text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: right;
+  color: #000;
+  margin-bottom: 15px;
 }
 .select-page-article__body {
   margin-bottom: 20px;

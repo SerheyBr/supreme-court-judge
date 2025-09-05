@@ -20,3 +20,30 @@
   &__posts {
   }
 }
+
+.search-result {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0;
+  border-bottom: 1px solid $light-grey;
+  span {
+    color: $light-blue;
+  }
+  &__location {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    text-align: right;
+    color: #000;
+    margin-bottom: 15px;
+  }
+
+  &__link {
+  }
+}
+.button-show-more {
+}
