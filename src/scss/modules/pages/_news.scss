@@ -57,3 +57,24 @@
   &__btn {
   }
 }
+
+@media (max-width: $breakpoint-xl) {
+  .news-post {
+    &__img {
+      margin-left: 10px;
+      width: auto;
+      max-width: 300px;
+    }
+  }
+}
+@media (max-width: $breakpoint-lg) {
+  .news-post {
+    flex-direction: column;
+    &__img {
+      margin-left: 0px;
+      margin-bottom: 30px;
+      width: auto;
+      max-width: 300px;
+    }
+  }
+}

@@ -46,3 +46,24 @@
   &__btn {
   }
 }
+
+@media (max-width: $breakpoint-xl) {
+  .landmarks-post {
+    &__title-box {
+      margin-left: 10px;
+      width: auto;
+      max-width: 300px;
+    }
+    &__title-top {
+      font-size: 40px;
+    }
+  }
+}
+@media (max-width: $breakpoint-lg) {
+  .landmarks-post {
+    flex-direction: column;
+    &__title-top {
+      font-size: 50px;
+    }
+  }
+}

@@ -79,3 +79,24 @@
     }
   }
 }
+
+@media (max-width: $breakpoint-xl) {
+  .select-page-article-more-articles {
+    padding-bottom: 30px;
+    border-bottom: 1px solid $light-grey;
+    margin-bottom: 30px;
+    &__list {
+      flex-direction: column;
+    }
+    &__link {
+      width: 50%;
+    }
+  }
+}
+@media (max-width: $breakpoint-sm) {
+  .select-page-article-more-articles {
+    &__link {
+      width: 100%;
+    }
+  }
+}

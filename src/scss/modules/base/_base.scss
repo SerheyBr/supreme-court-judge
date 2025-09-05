@@ -8,6 +8,9 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
+  @media (max-width: $breakpoint-lg) {
+    font-stretch: 75%;
+  }
 }
 
 main {
@@ -19,8 +22,9 @@ main {
 }
 
 .container {
-  max-width: 1290px;
+  max-width: 1350px;
   margin: 0 auto;
+  padding: 0 30px;
 }
 
 html {
@@ -41,6 +45,7 @@ html {
   flex-wrap: wrap;
   gap: 10px;
   &__tag {
+    white-space: nowrap;
     font-weight: 400;
     font-size: 16px;
     line-height: 100%;
@@ -53,6 +58,12 @@ html {
   &__tag.active {
     color: #fff;
     background: $dark-grey;
+  }
+}
+@media (max-width: $breakpoint-lg) {
+  .tags {
+    flex-wrap: nowrap;
+    overflow: auto;
   }
 }
 
@@ -107,4 +118,10 @@ blockquote {
 .loading img {
   width: 20px;
   height: 20px;
+}
+
+.no-scroll {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
 }

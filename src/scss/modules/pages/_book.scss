@@ -49,3 +49,27 @@
     }
   }
 }
+
+@media (max-width: $breakpoint-xl) {
+  .book {
+    &__img {
+      margin-left: 10px;
+      width: auto;
+      max-width: 300px;
+    }
+  }
+}
+@media (max-width: $breakpoint-lg) {
+  .book {
+    border-bottom: 1px solid $light-grey;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    flex-direction: column;
+    &__img {
+      margin-left: 0px;
+      margin-bottom: 30px;
+      width: auto;
+      max-width: 300px;
+    }
+  }
+}

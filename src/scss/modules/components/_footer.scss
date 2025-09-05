@@ -30,3 +30,11 @@
     }
   }
 }
+@media (max-width: $breakpoint-md) {
+  .footer {
+    margin-top: 0px;
+    &__right {
+      gap: 20px;
+    }
+  }
+}

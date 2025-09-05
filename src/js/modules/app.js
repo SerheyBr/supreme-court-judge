@@ -107,6 +107,11 @@ if (document.querySelector(".video-modal")) {
       modalVideo.classList.remove("active");
       document.body.style.overflow = "";
       document.documentElement.style.overflow = "";
+
+      const iframe = modalVideo.querySelector("iframe");
+      if (iframe) {
+        iframe.src = iframe.src;
+      }
     }
   });
 
@@ -115,6 +120,11 @@ if (document.querySelector(".video-modal")) {
       modalVideo.classList.remove("active");
       document.body.style.overflow = "";
       document.documentElement.style.overflow = "";
+
+      const iframe = modalVideo.querySelector("iframe");
+      if (iframe) {
+        iframe.src = iframe.src;
+      }
     }
   });
 }
@@ -132,3 +142,94 @@ if (document.querySelector(".video-modal")) {
 // }
 
 // document.addEventListener("DOMContentLoaded", setupTagButtons);
+
+// burger menu
+document.addEventListener("DOMContentLoaded", function () {
+  const burgerBtn = document.querySelector(".header__burger");
+  const menu = document.querySelector(".header__menu");
+  const body = document.body;
+
+  // Создаем overlay для затемнения фона
+  // const overlay = document.createElement("div");
+  // overlay.className = "overlay";
+  // document.body.appendChild(overlay);
+
+  // Функция открытия/закрытия меню
+  function toggleMenu() {
+    burgerBtn.classList.toggle("active");
+    menu.classList.toggle("active");
+    // overlay.classList.toggle("active");
+    body.classList.toggle("no-scroll");
+  }
+
+  // Обработчик клика по бургер-кнопке
+  burgerBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    toggleMenu();
+  });
+
+  // Закрытие меню при клике на overlay
+  // overlay.addEventListener("click", function () {
+  //   if (menu.classList.contains("active")) {
+  //     toggleMenu();
+  //   }
+  // });
+
+  // Закрытие меню при клике на ссылку
+  // const menuLinks = document.querySelectorAll(".menu-link");
+  // menuLinks.forEach((link) => {
+  //   link.addEventListener("click", function () {
+  //     if (window.innerWidth < 769) {
+  //       toggleMenu();
+  //     }
+  //   });
+  // });
+
+  // Закрытие меню при клике вне меню
+  // document.addEventListener("click", function (e) {
+  //   if (
+  //     menu.classList.contains("active") &&
+  //     !menu.contains(e.target) &&
+  //     !burgerBtn.contains(e.target)
+  //   ) {
+  //     toggleMenu();
+  //   }
+  // });
+
+  // Закрытие меню при нажатии Escape
+  // document.addEventListener("keydown", function (e) {
+  //   if (e.key === "Escape" && menu.classList.contains("active")) {
+  //     toggleMenu();
+  //   }
+  // });
+
+  // Адаптация при изменении размера окна
+  // window.addEventListener("resize", function () {
+  //   if (window.innerWidth >= 769) {
+  //     burgerBtn.classList.remove("active");
+  //     menu.classList.remove("active");
+  //     overlay.classList.remove("active");
+  //     body.classList.remove("no-scroll");
+  //   }
+  // });
+});
+
+// active btn for sidebar legal practik
+const silebarLP = document.querySelector(".sidebar-legal-practice");
+
+if (silebarLP) {
+  const btnSidebarLP = silebarLP.querySelector(".sidebar-legal-practice__btn");
+  const sidebarLPElements = silebarLP.querySelectorAll(
+    ".sidebar-legal-practice__list li"
+  );
+
+  btnSidebarLP.addEventListener("click", (e) => {
+    silebarLP.classList.toggle("active");
+  });
+
+  sidebarLPElements.forEach((el) => {
+    el.addEventListener("click", () => {
+      silebarLP.classList.remove("active");
+    });
+  });
+}

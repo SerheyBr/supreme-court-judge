@@ -31,7 +31,42 @@
   <div class="header__body">
     <div class="container">
       <div class="header__body-wrapper">
-        <nav>
+        <div class="header__burger">
+          <svg
+            class="header__burger--close"
+            width="22"
+            height="17"
+            viewBox="0 0 22 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 1H21M1 8.5H21M1 16H21"
+              stroke="#032169"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <svg
+            class="header__burger--open"
+            width="18"
+            height="17"
+            viewBox="0 0 18 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 1L17 16M1 16L17 1"
+              stroke="#032169"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <!-- </div> -->
+        </div>
+        <nav class="header__menu">
           <ul>
             <li class="current-menu-item">
               <a href="index.html">דף בית</a>
@@ -81,13 +116,25 @@
           </button>
 
           <input type="search" autocomplete="off" placeholder="חיפוש..." />
+          <ul class="header__search-body">
+            <!-- <li><a href="#">קריירה שיפוטית</a></li>
+            <li><a href="#">משפט וחברה</a></li>
+            <li><a href="#">ביטחון</a></li>
+            <li><a href="#">הקפדה על זכויות חשודים ונאשמים</a></li>
+            <li><a href="#">מדיניות ענישה</a></li>
+            <li><a href="#">הרפורמה בעבירות ההמתה</a></li>
+            <li><a href="#">דיני הסגרה</a></li>
+            <li><a href="#">משפט חוקתי</a></li>
+            <li><a href="#">משפט מינהלי</a></li>
+            <li><a href="#">משפט אזרחי</a></li> -->
+          </ul>
         </div>
       </div>
     </div>
   </div>
 </header>
 
-    <main class="layout">
+    <main class="layout legal-practice-page">
       <div class="container">
         <div class="layout__wrapper">
           <div class="layout__content">
@@ -301,6 +348,84 @@
           </div>
           <div class="layout__sidebar">
             <div class="sidebar-legal-practice">
+  <button class="sidebar-legal-practice__btn">
+    <div class="sidebar-legal-practice__btn-wrapper">
+      <svg
+        class="sidebar-legal-practice__btn--arrow-l"
+        width="10"
+        height="12"
+        viewBox="0 0 10 12"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1 1H8.5"
+          stroke="white"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M1 6H8.5"
+          stroke="white"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M1 11H8.5"
+          stroke="white"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <svg
+        class="sidebar-legal-practice__btn--arrow-c"
+        width="11"
+        height="12"
+        viewBox="0 0 11 12"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9.78542 5.57125C10.1091 5.76546 10.1091 6.23454 9.78542 6.42875L1.25725 11.5457C0.923988 11.7456 0.500001 11.5056 0.500001 11.1169L0.500001 0.883095C0.500001 0.494448 0.923986 0.254392 1.25725 0.454349L9.78542 5.57125Z"
+          fill="white"
+        />
+      </svg>
+      <svg
+        class="sidebar-legal-practice__btn--arrow-r"
+        width="10"
+        height="12"
+        viewBox="0 0 10 12"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1 1H8.5"
+          stroke="white"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M1 6H8.5"
+          stroke="white"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M1 11H8.5"
+          stroke="white"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
+  </button>
+  <p class="sidebar-legal-practice__title">עשייה משפטית - רשימת נושאים</p>
   <div class="sidebar-legal-practice__list">
     <li class="active">
       קריירה שיפוטית

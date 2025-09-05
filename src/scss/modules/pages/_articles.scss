@@ -57,3 +57,23 @@
   &__btn {
   }
 }
+@media (max-width: $breakpoint-xl) {
+  .articles-post {
+    &__img {
+      margin-left: 10px;
+      width: auto;
+      max-width: 300px;
+    }
+  }
+}
+@media (max-width: $breakpoint-lg) {
+  .articles-post {
+    flex-direction: column;
+    &__img {
+      margin-left: 0px;
+      margin-bottom: 30px;
+      width: auto;
+      max-width: 300px;
+    }
+  }
+}

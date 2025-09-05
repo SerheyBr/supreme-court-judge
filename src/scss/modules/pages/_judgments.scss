@@ -7,6 +7,9 @@
 
   &__posts {
   }
+  &__sidebar {
+    background-color: red;
+  }
 }
 
 .judgments-post {
@@ -58,4 +61,35 @@
     line-height: 100%;
     color: $light-blue;
   }
+}
+
+@media (max-width: $breakpoint-xl) {
+  .judgments-post {
+    &__title-box {
+      margin-left: 10px;
+      width: auto;
+      max-width: 300px;
+    }
+    &__title-date {
+      // font-size: 40px;
+    }
+  }
+}
+@media (max-width: $breakpoint-lg) {
+  .judgments-post {
+    flex-direction: column;
+    &__title-date {
+      font-size: 50px;
+    }
+  }
+  // .judgments-page .layout__wrapper {
+  //   flex-direction: column;
+  // }
+  // .judgments-page .layout__wrapper {
+  //   flex-direction: column;
+  //   gap: 15px;
+  // }
+  // .judgments-page .layout__sidebar {
+  //   min-height: auto;
+  // }
 }
